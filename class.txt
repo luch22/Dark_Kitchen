@@ -48,22 +48,22 @@ Onigiri Thon	        ** 3,5€	        .onigiri .poisson	                Boule d
 
 Ramen
 -----			
-Ramen au canard	        *** 12€	        .ramen .volaille .crustacé	        Bouillon de nouille, canard, oeuf, naruto, soja, oignon ciboule
-Ramen au poulet	        ** 10€	        .ramen .volaille .crustacé	        Bouillon de nouille, poulet, naruto, soja, oignon ciboule
+Ramen au canard	        *** 12€	        .ramen .volaille .crustace	        Bouillon de nouille, canard, oeuf, naruto, soja, oignon ciboule
+Ramen au poulet	        ** 10€	        .ramen .volaille .crustace	        Bouillon de nouille, poulet, naruto, soja, oignon ciboule
 Ramen aux légumes	    * 8€	        .ramen .vege	                    Bouillon de nouille,  légumes, soja, oignon ciboule
 Ramen au boeuf	        ** 10€	        .ramen .viande	                    Bouillon de nouille,  boeuf, soja, oignon ciboule
-Ramen au porc	        ** 10€	        .ramen .viande .crustacé	        Bouillon de nouille, porc, naruto, soja, oignon ciboule
-Ramen aux crevettes	    ** 10€	        .ramen .crustacé                    Bouillon de nouille,  crevette, soja, oignon ciboule
+Ramen au porc	        ** 10€	        .ramen .viande .crustace	        Bouillon de nouille, porc, naruto, soja, oignon ciboule
+Ramen aux crevettes	    ** 10€	        .ramen .crustace                    Bouillon de nouille,  crevette, soja, oignon ciboule
 
 Boissons			
 --------
-Spa	                    * 2€    	    .boisson .non-pétillant .soft	
-Chaudfontaine eau pétillante** 2,5€	    .boisson .pétillant .soft	
-Coca Cola	            * 2€	        .boisson .pétillant .soft	
-Coca Cola Zero	        * 2€	        .boisson .pétillant .soft	
-Bière Asahi	            ** 2,5€	        .boisson .pétillant .alcool	
-Saké Shirakabegura kimoto junmai*** 4€	.boisson .alcool .non-pétillant	
-Saké Rihaku Le Poète errant	*** 4€	    .boisson .alcool .non-pétillant	
+Spa	                    * 2€    	    .boisson .non-petillant .soft	
+Chaudfontaine eau pétillante** 2,5€	    .boisson .petillant .soft	
+Coca Cola	            * 2€	        .boisson .petillant .soft	
+Coca Cola Zero	        * 2€	        .boisson .petillant .soft	
+Bière Asahi	            ** 2,5€	        .boisson .petillant .alcool	
+Saké Shirakabegura kimoto junmai*** 4€	.boisson .alcool .non-petillant	
+Saké Rihaku Le Poète errant	*** 4€	    .boisson .alcool .non-petillant	
 
 Dessert			
 -------

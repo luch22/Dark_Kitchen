@@ -4,7 +4,7 @@ let prix = [2, 25, 35, 4, 5, 7, 8, 9, 10, 12]
 const menuSushi = [
     {
         name: "Sushi Avocat",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "sushi",
@@ -17,11 +17,11 @@ const menuSushi = [
     },   
     {
         name: "Sushi Crevette",
-        prix: "prix[3]",
+        prix: prix[3],
         picture: "",
         classes: [
             "sushi",
-            "crustacé",
+            "crustace",
         ],
         ingredients: [
             "Base riz",
@@ -30,7 +30,7 @@ const menuSushi = [
     },
     {
         name: "Sushi Daurade",
-        prix: "prix[3]",
+        prix: prix[3],
         picture: "",
         classes: [
             "sushi",
@@ -43,7 +43,7 @@ const menuSushi = [
     },
     {
         name: "Sushi Oeuf",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "sushi",
@@ -56,7 +56,7 @@ const menuSushi = [
     },
     {
         name: "Sushi Salmon Cheese",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "sushi",
@@ -71,7 +71,7 @@ const menuSushi = [
     },
     {
         name: "Sushi Saumon",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "sushi",
@@ -85,7 +85,7 @@ const menuSushi = [
 
     {
         name: "Sushi Thon",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "sushi",
@@ -101,7 +101,7 @@ const menuSushi = [
 const menuMaki = [
     {
         name: "Maki Avocat",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "maki",
@@ -114,7 +114,7 @@ const menuMaki = [
     },
     {
         name: "Maki Avocat Wasabi",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "maki",
@@ -129,7 +129,7 @@ const menuMaki = [
     },
     {
         name: "Maki Cheese Avocat",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "maki",
@@ -144,7 +144,7 @@ const menuMaki = [
     },
     {
         name: "Maki Concombre",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "maki",
@@ -157,7 +157,7 @@ const menuMaki = [
     },
     {
         name: "Maki Daurade Kumquat",
-        prix: "prix[3]",
+        prix: prix[3],
         picture: "",
         classes: [
             "maki",
@@ -171,7 +171,7 @@ const menuMaki = [
     },
     {
         name: "Maki Saumon",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "maki",
@@ -185,7 +185,7 @@ const menuMaki = [
     },
     {
         name: "Maki Thon",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "maki",
@@ -202,7 +202,7 @@ const menuMaki = [
 const menuRolls = [
     {
         name: "Cajun Roll",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "rolls",
@@ -217,7 +217,7 @@ const menuRolls = [
     },
     {
         name: "California Nordic Roll",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "rolls",
@@ -231,7 +231,7 @@ const menuRolls = [
     },
     {
         name: "California Pacific",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "rolls",
@@ -246,7 +246,7 @@ const menuRolls = [
     },
     {
         name: "California Saumon Avocat",
-        prix: "prix[2]",
+        prix: prix[2],
         picture: "",
         classes: [
             "rolls",
@@ -261,7 +261,7 @@ const menuRolls = [
     },
     {
         name: "Daurade Wasabi",
-        prix: "prix[3]",
+        prix: prix[3],
         picture: "",
         classes: [
             "rolls",
@@ -276,7 +276,7 @@ const menuRolls = [
     },
     {
         name: "Dengaku Roll",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "rolls",
@@ -292,7 +292,7 @@ const menuRolls = [
     },
     {
         name: "The upside Down Roll",
-        prix: "prix[0]",
+        prix: prix[0],
         picture: "",
         classes: [
             "rolls",
@@ -305,13 +305,12 @@ const menuRolls = [
             " mayonnaise",
         ],
     },
-
 ]
 
 const menuSashimi = [
     {
         name: "Sashimi Assortiment",
-        prix: "prix[7]",
+        prix: prix[7],
         picture: "",
         classes: [
             "sashimi",
@@ -325,7 +324,7 @@ const menuSashimi = [
     },
     {
         name: "Sashimi Légume",
-        prix: "prix[4]",
+        prix: prix[4],
         picture: "",
         classes: [
             "sashimi",
@@ -338,7 +337,7 @@ const menuSashimi = [
     },
     {
         name: "Sashimi Mixte Thon-Saumon",
-        prix: "prix[7]",
+        prix: prix[7],
         picture: "",
         classes: [
             "sashimi",
@@ -350,29 +349,355 @@ const menuSashimi = [
         ],
     },
     {
-        name: "Sashimi Saumon 5pcs",
-        prix: "prix[8]",
+        name: "Sashimi Thon 5pcs",
+        prix: prix[9],
         picture: "",
         classes: [
             "rolls",
             "poisson",
         ],
         ingredients: [
-            "Tranche de Saumon",
+            "Tranche de thon",
             " soja",
         ],
     },
     {
-        name: "Sashimi Saumon",
-        prix: "prix[5]",
+        name: "Sashimi Thon",
+        prix: prix[4],
         picture: "",
         classes: [
             "rolls",
             "poisson",
         ],
         ingredients: [
-            "Tranche de Saumon",
+            "Tranche de thon",
             " soja",
         ],
-    }
+    },
 ]
+ 
+const menuOnigiri = [
+        {
+            name: "Onigiri Nature",
+            prix: prix[3],
+            picture: "",
+            classes: [
+                "onigiri",
+                "vegan",
+            ],
+            ingredients: [
+                "Boule de riz",
+                " sésame",
+            ],
+        },
+        {
+            name: "Onigiri Oeuf",
+            prix: prix[0],
+            picture: "",
+            classes: [
+                "onigiri",
+                "oeuf",
+            ],
+            ingredients: [
+                "Boule de Riz",
+                " oeuf",
+            ],
+        },
+        {
+            name: "Onigiri Saumon",
+            prix: prix[3],
+            picture: "",
+            classes: [
+                "onigiri",
+                "poisson",
+            ],
+            ingredients: [
+                "Boule de riz",
+                " saumon",
+            ],
+        },
+        {
+            name: "Onigiri Thon",
+            prix: prix[2],
+            picture: "",
+            classes: [
+                "onigiri",
+                "poisson",
+            ],
+            ingredients: [
+                "Boule de Riz",
+                " thon rouge",
+            ],
+        },
+        {
+            name: "Onigiri Thon Mayo",
+            prix: prix[2],
+            picture: "",
+            classes: [
+                "onigiri",
+                "poisson",
+                "oeuf",
+            ],
+            ingredients: [
+                "Boule de Riz",
+                " thon",
+                " mayonnaise",
+            ],
+        },
+    ]
+
+
+    const menuRamen = [
+        {
+            name: "Ramen Boeuf",
+            prix: prix[6],
+            picture: "",
+            classes: [
+                "ramen",
+                "viande",
+            ],
+            ingredients: [
+                "Bouillon de nouille",
+                " boeuf",
+                " soja",
+                " oignon ciboule",
+            ],
+        },
+        {
+            name: "Ramen Canard",
+            prix: prix[9],
+            picture: "",
+            classes: [
+                "ramen",
+                "volaille",
+                "crustace"
+            ],
+            ingredients: [
+                "Bouillon de nouille",
+                " canard",
+                " oeuf",
+                " naruto",
+                " soja", 
+                " oignon ciboule",
+            ],
+        },
+        {
+            name: "Ramen Crevette",
+            prix: prix[8],
+            picture: "",
+            classes: [
+                "ramen",
+                "crustace",
+            ],
+            ingredients: [
+                "Bouillon de nouille",
+                " crevette",
+                " soja",
+                " oignon ciboule",
+            ],
+        },
+        {
+            name: "Ramen Légumes",
+            prix: prix[6],
+            picture: "",
+            classes: [
+                "ramen",
+                "vege",
+            ],
+            ingredients: [
+                "Bouillon de nouille",
+                " légumes",
+                " soja",
+                " oignon ciboule",
+            ],
+        },
+        {
+            name: "Ramen au poulet",
+            prix: prix[0],
+            picture: "",
+            classes: ["ramen", "volaille", "crustace"],
+            ingredient: [
+              "Bouillon de nouille",
+              " poulet",
+              " naruto",
+              " soja",
+              " oignon ciboule",
+            ],
+          },
+          {
+            name: "Ramen au porc",
+            prix: prix[0],
+            picture: "",
+            classes: ["ramen", "viande", "crustace"],
+            ingredient: [
+              "Bouillon de nouille",
+              " porc",
+              " naruto",
+              " soja",
+              " oignon ciboule",
+            ],
+          },
+    ];
+    const menuBoissons = [
+        {
+          name: "Spa",
+          prix: prix[0],
+          picture: "",
+          classes: ["boisson", "non_petillant", "soft"],
+        },
+        {
+          name: "Chaudfontaine eau pétillante",
+          prix: prix[0],
+          picture: "",
+          classes: ["boisson", "petillant", "soft"],
+        },
+        {
+          name: "Coca Cola",
+          prix: prix[0],
+          picture: "",
+          classes: ["boisson", "petillant", "soft"],
+        },
+        {
+          name: "Coca Cola Zero",
+          prix: prix[0],
+          picture: "",
+          classes: ["boisson", "petillant", "soft"],
+        },
+        {
+          name: "Bière Asahi",
+          prix: prix[0],
+          picture: "",
+          classes: ["boisson", "petillant", "alcool"],
+        },
+        {
+          name: "Saké Shirakabegura kimoto junmai",
+          prix: prix[0],
+          picture: "",
+          classes: ["boisson", "non_petillant", "alcool"],
+        },
+        {
+          name: "Saké Rihaku Le Poète errant",
+          prix: prix[0],
+          picture: "",
+          classes: ["boisson", "non_petillant", "alcool"],
+        },
+      ];
+      
+
+    const menuDessert = [
+        {
+            name: "Cheesecake",
+            prix: prix[0],
+            picture: "",
+            classes: [
+                "dessert",
+                "lactose",
+                "vege",
+            ],
+        },
+        {
+            name: "Moelleux au Chocolat",
+            prix: prix[2],
+            picture: "",
+            classes: [
+                "dessert",
+                "lactose",
+                "vege",
+            ],
+        },
+        {
+            name: "Mousse au chocolat",
+            prix: prix[2],
+            picture: "",
+            classes: [
+                "dessert",
+                "lactose",
+                "vege",
+            ],
+        },
+        {
+            name: "Mochi Glacé Mangue",
+            prix: prix[4],
+            picture: "",
+            classes: [
+                "dessert",
+                "lactose",
+                "vege",
+            ],
+        },
+        {
+            name: "Mochi Glacé Coco",
+            prix: prix[4],
+            picture: "",
+            classes: [
+                "dessert",
+                "lactose",
+                "vege",
+            ],
+        },
+        {
+            name: "Salade de Fruits du Moment",
+            prix: prix[2],
+            picture: "",
+            classes: [
+                "dessert",
+                "vege",
+            ],
+        },
+        {
+            name: "Mangue Fraîche",
+            prix: prix[0],
+            picture: "",
+            classes: [
+                "dessert",
+                "vege",
+            ],
+        },
+      
+    ];
+
+const fullMenu = [menuSushi, menuMaki, menuRolls, menuSashimi, menuOnigiri, menuRamen, menuBoissons, menuDessert];
+
+const main = document.querySelector("main");
+
+fullMenu.forEach((elem) => {
+elem.forEach((object) => {
+	const card = document.createElement("div");
+	card.classList.add("card");
+
+
+
+	let picture = document.createElement("img");
+	picture.classList.add("img");
+	picture.src = object.picture;
+	card.appendChild(picture);
+
+	let cardBody = document.createElement("div");
+	cardBody.classList.add("card-body");
+	card.appendChild(cardBody);
+
+	let name = document.createElement("h2");
+	name.classList.add("h2");
+	name.textContent = object.name;
+	cardBody.appendChild(name);
+
+	let prix = document.createElement("span");
+	prix.classList.add("item");
+	prix.textContent = "Prix : " + object.prix;
+	cardBody.appendChild(prix);
+
+
+	let classes = document.createElement("span");
+	classes.classList.add("item");
+	classes.textContent = "Catégories : " + object.classes;
+	cardBody.appendChild(classes);
+
+	let ingredients = document.createElement("span");
+	ingredients.classList.add("item");
+	ingredients.textContent = "Ingredients : " + object.ingredients;
+	cardBody.appendChild(ingredients);
+
+
+	main.appendChild(card);
+});
+});
