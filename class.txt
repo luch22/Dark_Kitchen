@@ -1,0 +1,76 @@
+Sushi	                  Prix	        Classes	                                Ingredients
+--------------------
+Sushi Salmon Cheese 	** 3,5€	        .sushi .poisson .lactose        	Base riz, saumon ,fromage
+Sushi Saumon	        * 2€	        .sushi .poisson 	                Base riz, saumon
+Sushi Avocat	        * 2€	        .sushi .vege	                    Base riz, avocat
+Sushi Thon	            ** 3,5€	        .sushi . poisson	                Base riz, thon rouge
+Sushi Daurade	        *** 4€	        .sushi . poisson	                Base riz, daurade
+Sushi Crevette	        *** 4€	        .sushi . poisson	                Base riz, crevette
+Sushi Oeufs 	        * 2€	        .sushi . oeuf	                    Base riz, oeuf
+
+Maki
+------			
+Maki Concombre	        * 2€	        .maki .vege                     	Base riz-nori, comcombre
+Maki Daurade Kumquat	*** 4€	        .maki .poisson	                    Base riz-nori, daurade, kumquat
+Maki Cheese Avocat	    ** 3,5€	        .maki .lactose .vege	            Base riz-nori, avocat, fromage
+Maki Avocat wasabi	    ** 3,5€	        .maki .vege .piquant	            Base riz-nori, avocat, wasabi
+Maki Avocat	            * 2€	        .maki .vege	                        Base riz-nori, avocat
+Maki Saumon	            * 2€	        .maki .poisson	                    Base riz-nori, saumon
+Maki Thon	            ** 3,5€	        .maki .poisson                     	Base riz-nori, thon rouge
+
+Rolls
+------			
+Daurade Wasabi	        *** 4€	        .rolls .poisson .piquant        	Base riz-nori, daurade, wasabi
+Cajun Roll	            ** 3,5€	        .rolls .volaille .oeuf          	Base riz-nori, poulet, mayo
+California Nordic Roll	** 3,5€	        .rolls  .poisson	                Base riz-nori, saumon, sésame
+The Upside Down Roll	* 2€	        .rolls  .vege .oeuf             	Base riz-nori, chou rouge mariné, mayo, sésame
+Dengaku Roll	        * 2€	        .rolls .vege .piquant           	Base riz-nori, sésame wasabi, aubergine
+California Saumon avocat** 3,5€     	.rolls .lactose .poisson           	Base riz-nori, saumon, avocat
+California Pacific	    * 2€	        .rolls .poisson	                    Base riz-nori, saumon, avocat, ciboulette
+
+Sashimi
+-------			
+Sashimi Thon	        * 5€	        .sashimi .poisson	                Tranche de thon rouge, soja
+Sashimi Saumon 5 pièces	****10€	        .sashimi .poisson	                Tranche de saumon, soja
+Sashimi Thon 5 pièces	*****12 €	    .sashimi .poisson	                Tranche de thon rouge, soja
+Sashimi Saumon	        ** 7€	        .sashimi .poisson	                Tranche de saumon, soja
+Sashimi Mixte Thon-Saumon*** 9€	        .sashimi .poisson	                Tranche de saumon  et de thon, soja
+Sashimi Assortiment	     *** 9€	        .sashimi .poisson .vege	            Tranche de saumon, thon et légume, soja
+Sachimi Légumes     	* 5€	        .sashimi .vege	                    Tranche de légume, soja
+
+Onigiri
+-------			
+Onigiri Saumon	        *** 4€	        .onigiri .poisson	                Boule de riz, saumon
+Onigiri Thon mayo	    ** 3,5€	        .onigiri .poisson .oeuf 	        Boule de riz, thon, mayo
+Onigiri Nature	        * 2€	        .onigiri 	                        Boule de riz, sesame
+Onigiri Oeuf	        * 2€	        .onigiri .oeuf	                    Boule de riz, oeuf de caille
+Onigiri Thon	        ** 3,5€	        .onigiri .poisson	                Boule de riz, thon
+
+Ramen
+-----			
+Ramen au canard	        *** 12€	        .ramen .volaille .crustacé	        Bouillon de nouille, canard, oeuf, naruto, soja, oignon ciboule
+Ramen au poulet	        ** 10€	        .ramen .volaille .crustacé	        Bouillon de nouille, poulet, naruto, soja, oignon ciboule
+Ramen aux légumes	    * 8€	        .ramen .vege	                    Bouillon de nouille,  légumes, soja, oignon ciboule
+Ramen au boeuf	        ** 10€	        .ramen .viande	                    Bouillon de nouille,  boeuf, soja, oignon ciboule
+Ramen au porc	        ** 10€	        .ramen .viande .crustacé	        Bouillon de nouille, porc, naruto, soja, oignon ciboule
+Ramen aux crevettes	    ** 10€	        .ramen .crustacé                    Bouillon de nouille,  crevette, soja, oignon ciboule
+
+Boissons			
+--------
+Spa	                    * 2€    	    .boisson .non-pétillant .soft	
+Chaudfontaine eau pétillante** 2,5€	    .boisson .pétillant .soft	
+Coca Cola	            * 2€	        .boisson .pétillant .soft	
+Coca Cola Zero	        * 2€	        .boisson .pétillant .soft	
+Bière Asahi	            ** 2,5€	        .boisson .pétillant .alcool	
+Saké Shirakabegura kimoto junmai*** 4€	.boisson .alcool .non-pétillant	
+Saké Rihaku Le Poète errant	*** 4€	    .boisson .alcool .non-pétillant	
+
+Dessert			
+-------
+Cheesecake	            * 2€        	.dessert .lactose .vege	
+Moelleux au chocolat	** 3,5€     	.dessert .lactose .vege	
+Mousse au chocolat	    ** 3,5€     	.dessert .lactose .vege	
+Mochi glacé mangue	    *** 5€      	.dessert .lactose .vege	
+Mochi glacé coco	    *** 5€      	.dessert .lactose .vege	
+Salade de fruits du moment** 3,5€	    .dessert .vege	
+Mangue fraiche	        * 2€        	.dessert .vege	
