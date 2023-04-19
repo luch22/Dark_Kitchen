@@ -1,6 +1,6 @@
-import { fullMenu } from "./objetMenu";
-("./objetMenu.js");
+import { fullMenu } from "./objetMenu.js";
 
+//#region filtre et tri
 function filterMenu(listMenu, tags) {
   var monTableau = new Array();
   listMenu.forEach((menu) => {
@@ -14,6 +14,23 @@ function filterMenu(listMenu, tags) {
   });
   return monTableau;
 }
+
+function sortMenu(listMenu) {
+  var monTableau = new Array();
+  listMenu.forEach((menu) => {
+    menu.forEach((plat) => {
+      monTableau.push(plat);
+    });
+  });
+  console.log(monTableau.length);
+  monTableau.sort(function (a, b) {
+    return a.prix - b.prix;
+  });
+  return monTableau;
+}
+// console.log(filterMenu(fullMenu, "maki"));
+// console.log(sortMenu(fullMenu));
+//#endregion
 
 const bouton = document.body.querySelector("#darkmode");
 const body = document.querySelector("body");
