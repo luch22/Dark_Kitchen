@@ -1,3 +1,17 @@
+function filter(listMenu, tags) {
+  var monTableau = new Array();
+  listMenu.forEach((menu) => {
+    menu.forEach((plat) => {
+      plat.classes.forEach((element) => {
+        if (tags.includes(element)) {
+          monTableau.push(plat);
+        }
+      });
+    });
+  });
+  return monTableau;
+}
+
 
 const bouton = document.body.querySelector("#darkmode")
 const body = document.querySelector('body');
