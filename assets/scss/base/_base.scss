@@ -2,24 +2,27 @@
 
 
 ::before,
-::after {
+::after { 
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
-h1 {
-    text-align: center;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 50px 0;
-}
-header {
 
-    display: grid;
-    grid-template-columns: 75px auto;
+header {
+    padding-top: 40px;
+    display: flex;
+    flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    background-color:aquamarine;
+    background-color:rgba(127, 255, 212, 0.575);
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+    };
+    .toggle{
+        margin: 25px 0;
+    };
 }
 body {
     margin: 0;
@@ -29,23 +32,67 @@ body {
  }
 
 main {
-    max-width: 1300px;
-    width: 80%;
     height: auto;
-    display: grid;
-    margin: 10px auto 0;
-    grid-template-columns: repeat(auto-fill, 300px);
-    gap: 12px;
-    justify-content: center;
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
+
+
 .card {
-    width: 200px;
-    height: 260px;
+    width: 250px;
+    height: 360px;
+    margin: 25px 25px;
+    padding-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out; 
+    background-color: rgba(78, 238, 113, 0.2);
+    box-shadow: 0px 0px 10px 0px #000;  
+};
+
+.img{
+    height: 130px;
+    width: 250px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 5px 5px 0px 0px;
 }
-.poisson {
-    color: red;
-} 
+.card-body{ 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 230px;
+    
+    .h2{
+        font-size: 2em;
+        font-weight: 600;
+        text-decoration: underline darkcyan;
+        text-align: center;
+        margin: 0 8px 10px 8px;
+    };
+     .item{
+      margin: 5px 0;
+      text-align: center;
+      line-height: 20px;
+      font-size: 1.3em;
+      padding: 0 5px;
+
+  };
+ }; 
+ //responsive
+ @media  screen and (max-width: 400px) {
+    main{
+        max-width: 400px;
+    }
+ }
+ @media screen and (min-width: 400px) {
+    main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-width: 400px;
+    }
+ };
+ 
