@@ -1,11 +1,11 @@
-import { fullMenu } from "./objetMenu";
-("./objetMenu.js");
+import { fullMenu } from "./objetMenu.js";
+
 
 function filterMenu(listMenu, tags) {
   var monTableau = new Array();
   listMenu.forEach((menu) => {
     menu.forEach((plat) => {
-      plat.classes.forEach((element) => {
+      plat.categories.forEach((element) => {
         if (tags.includes(element)) {
           monTableau.push(plat);
         }
@@ -30,7 +30,7 @@ fullMenu.forEach((elem) => {
   elem.forEach((object) => {
     const card = document.createElement("div");
     card.setAttribute("class", "card");
-    object.classes.forEach((e) => {
+    object.categories.forEach((e) => {
       card.classList.add(e);
     });
 
@@ -50,13 +50,13 @@ fullMenu.forEach((elem) => {
 
     let prix = document.createElement("span");
     prix.classList.add("item");
-    prix.textContent = "Prix : " + object.prix;
+    prix.textContent = "Prix : " + object.prix +" €";
     cardBody.appendChild(prix);
 
-    let classes = document.createElement("span");
-    classes.classList.add("item");
-    classes.textContent = "Catégories : " + object.classes;
-    cardBody.appendChild(classes);
+    let categories = document.createElement("span");
+    categories.classList.add("item");
+    categories.textContent = "Catégories : " + object.categories;
+    cardBody.appendChild(categories);
 
     let ingredients = document.createElement("span");
     ingredients.classList.add("item");
