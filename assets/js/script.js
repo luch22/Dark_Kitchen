@@ -1,3 +1,6 @@
+import { fullMenu } from "./objetMenu";
+("./objetMenu.js");
+
 function filterMenu(listMenu, tags) {
   var monTableau = new Array();
   listMenu.forEach((menu) => {
