@@ -81,16 +81,10 @@ function sortMenu(listMenu) {
 
 const bouton = document.body.querySelector("#darkmode");
 const body = document.querySelector("body");
+const main = document.querySelector("main");
 
 bouton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 });
 
-fullMenu.forEach((menu) => {
-  console.log(menu[0].categorie[0]);
-});
-
-console.log(bouton.getAttribute("type"));
-
-const main = document.querySelector("main");
 affichageHtml(fullMenu);
