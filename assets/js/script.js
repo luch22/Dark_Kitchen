@@ -1,8 +1,11 @@
-function filter(listMenu, tags) {
-  var monTableau = new Array();
+import { fullMenu } from "./objetMenu.js";
+
+//#region Function
+function filterMenu(listMenu, tags) {
+  let monTableau = new Array();
   listMenu.forEach((menu) => {
     menu.forEach((plat) => {
-      plat.classes.forEach((element) => {
+      plat.categorie.forEach((element) => {
         if (tags.includes(element)) {
           monTableau.push(plat);
         }
@@ -12,718 +15,159 @@ function filter(listMenu, tags) {
   return monTableau;
 }
 
+function sortMenu(listMenu) {
+  let monTableau = new Array();
+  listMenu.forEach((menu) => {
+    menu.forEach((plat) => {
+      monTableau.push(plat);
+    });
+  });
+  console.log(monTableau.length);
+  monTableau.sort(function (a, b) {
+    return a.prix - b.prix;
+  });
+  return monTableau;
+}
 
-const bouton = document.body.querySelector("#darkmode")
-const body = document.querySelector('body');
+function affichageHtml(listMenu) {
+  listMenu.forEach((menu) => {
+    let catmenu = menu[0].categorie[0];
+    let sectionParent = document.createElement("section");
+    sectionParent.setAttribute("class", catmenu);
+    sectionParent.innerHTML = `<h3>${catmenu}</h3>  `;
+    menu.forEach((plat) => {
+      sectionParent.append(listerPlat(plat));
+      main.append(sectionParent);
+    });
+  });
+}
 
-bouton.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-});
+function listerPlat(plat) {
+  const card = document.createElement("div");
+  card.setAttribute("class", "card");
+  plat.categorie.forEach((e) => {
+    card.classList.add(e);
+  });
 
-console.log(bouton.getAttribute("type"));
+  let picture = document.createElement("img");
+  picture.classList.add("img");
+  picture.src = plat.picture;
+  card.appendChild(picture);
 
-/*The Collection Array: contain all cards data*/
-let prix = ["2€", "2,5€", "3,5€", "4€", "5€", "7€", "8€", "9€", "10€", "12€"]
+  let cardBody = document.createElement("div");
+  cardBody.classList.add("card-body");
+  card.appendChild(cardBody);
 
-const menuSushi = [
-    {
-        name: "Sushi Avocat",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "sushi",
-            "vege",
-        ],
-        ingredients: [
-            "Base riz",
-            " avocat",
-        ],
-    },   
-    {
-        name: "Sushi Crevette",
-        prix: prix[3],
-        picture: "",
-        classes: [
-            "sushi",
-            "crustace",
-        ],
-        ingredients: [
-            "Base riz",
-            " crevette",
-        ],
-    },
-    {
-        name: "Sushi Daurade",
-        prix: prix[3],
-        picture: "",
-        classes: [
-            "sushi",
-            "poisson",
-        ],
-        ingredients: [
-            "Base riz",
-            " daurade",
-        ],
-    },
-    {
-        name: "Sushi Oeuf",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "sushi",
-            "oeuf",
-        ],
-        ingredients: [
-            "Base riz",
-            " oeuf",
-        ],
-    },
-    {
-        name: "Sushi Salmon Cheese",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "sushi",
-            "poisson",
-            "lactose",
-        ],
-        ingredients: [
-            "Base riz",
-            " saumon",
-            " fromage",
-        ],
-    },
-    {
-        name: "Sushi Saumon",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "sushi",
-            "poisson",
-        ],
-        ingredients: [
-            "Base riz",
-            " saumon",
-        ],
-    },
+  let name = document.createElement("h2");
+  name.classList.add("h2");
+  name.textContent = plat.name;
+  cardBody.appendChild(name);
 
-    {
-        name: "Sushi Thon",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "sushi",
-            "poisson",
-        ],
-        ingredients: [
-            "Base riz",
-            "  thon rouge",
-        ],
-    },
-]
+  let prix = document.createElement("span");
 
-const menuMaki = [
-    {
-        name: "Maki Avocat",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "maki",
-            "vege",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " avocat",
-        ],
-    },
-    {
-        name: "Maki Avocat Wasabi",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "maki",
-            "vege",
-            "piquant",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " avocat",
-            " wasabi",
-        ],
-    },
-    {
-        name: "Maki Cheese Avocat",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "maki",
-            "vege",
-            "lactose",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " avocat",
-            " fromage",
-        ],
-    },
-    {
-        name: "Maki Concombre",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "maki",
-            "vege",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " concombre",
-        ],
-    },
-    {
-        name: "Maki Daurade Kumquat",
-        prix: prix[3],
-        picture: "",
-        classes: [
-            "maki",
-            "vege",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " daurade",
-            " kumquat",
-        ],
-    },
-    {
-        name: "Maki Saumon",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "maki",
-            "vege",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " avocat",
-            " saumon",
-        ],
-    },
-    {
-        name: "Maki Thon",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "maki",
-            "poisson",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " avocat",
-            " thon rouge",
-        ],
-    },
-]
+  prix.innerHTML = `<span class="prixArticle ">Prix</span> :  ${plat.prix} €`;
+  prix.classList.add("item");
+  // prix.textContent = "Prix : " + plat.prix + " €";
+  cardBody.appendChild(prix);
 
-const menuRolls = [
-    {
-        name: "Cajun Roll",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "rolls",
-            "volaille",
-            "oeuf",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " poulet",
-            " mayonnaise",
-        ],
-    },
-    {
-        name: "California Nordic Roll",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "rolls",
-            "poisson",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " saumon",
-            " sésame",
-        ],
-    },
-    {
-        name: "California Pacific",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "rolls",
-            "poisson",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " saumon",
-            " avocat",
-            " ciboulette",
-        ],
-    },
-    {
-        name: "California Saumon Avocat",
-        prix: prix[2],
-        picture: "",
-        classes: [
-            "rolls",
-            "poisson",
-            "lactose",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " saumon",
-            " avocat",
-        ],
-    },
-    {
-        name: "Daurade Wasabi",
-        prix: prix[3],
-        picture: "",
-        classes: [
-            "rolls",
-            "poisson",
-            "piquant",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " daurade",
-            " wasabi",
-        ],
-    },
-    {
-        name: "Dengaku Roll",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "rolls",
-            "vege",
-            "piquant",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " sésame",
-            " wasabi",
-            " aubergine",
-        ],
-    },
-    {
-        name: "The upside Down Roll",
-        prix: prix[0],
-        picture: "",
-        classes: [
-            "rolls",
-            "vege",
-            "oeuf",
-        ],
-        ingredients: [
-            "Base riz-nori",
-            " chou rouge mariné",
-            " mayonnaise",
-        ],
-    },
-]
+  let categorie = document.createElement("span");
+  categorie.classList.add("item");
+  categorie.textContent = "Catégories : " + plat.categorie;
+  cardBody.appendChild(categorie);
 
-const menuSashimi = [
-    {
-        name: "Sashimi Assortiment",
-        prix: prix[7],
-        picture: "",
-        classes: [
-            "sashimi",
-            "poisson",
-            "vege",
-        ],
-        ingredients: [
-            "Tranche de saumon, thon et légume",
-            " soja",
-        ],
-    },
-    {
-        name: "Sashimi Légume",
-        prix: prix[4],
-        picture: "",
-        classes: [
-            "sashimi",
-            "vege",
-        ],
-        ingredients: [
-            "Tranche de légume",
-            " soja",
-        ],
-    },
-    {
-        name: "Sashimi Mixte Thon-Saumon",
-        prix: prix[7],
-        picture: "",
-        classes: [
-            "sashimi",
-            "poisson",
-        ],
-        ingredients: [
-            "Tranche de Thon-Saumon",
-            " soja",
-        ],
-    },
-    {
-        name: "Sashimi Thon 5pcs",
-        prix: prix[9],
-        picture: "",
-        classes: [
-            "rolls",
-            "poisson",
-        ],
-        ingredients: [
-            "Tranche de thon",
-            " soja",
-        ],
-    },
-    {
-        name: "Sashimi Thon",
-        prix: prix[4],
-        picture: "",
-        classes: [
-            "rolls",
-            "poisson",
-        ],
-        ingredients: [
-            "Tranche de thon",
-            " soja",
-        ],
-    },
-]
- 
-const menuOnigiri = [
-        {
-            name: "Onigiri Nature",
-            prix: prix[3],
-            picture: "",
-            classes: [
-                "onigiri",
-                "vegan",
-            ],
-            ingredients: [
-                "Boule de riz",
-                " sésame",
-            ],
-        },
-        {
-            name: "Onigiri Oeuf",
-            prix: prix[0],
-            picture: "",
-            classes: [
-                "onigiri",
-                "oeuf",
-            ],
-            ingredients: [
-                "Boule de Riz",
-                " oeuf",
-            ],
-        },
-        {
-            name: "Onigiri Saumon",
-            prix: prix[3],
-            picture: "",
-            classes: [
-                "onigiri",
-                "poisson",
-            ],
-            ingredients: [
-                "Boule de riz",
-                " saumon",
-            ],
-        },
-        {
-            name: "Onigiri Thon",
-            prix: prix[2],
-            picture: "",
-            classes: [
-                "onigiri",
-                "poisson",
-            ],
-            ingredients: [
-                "Boule de Riz",
-                " thon rouge",
-            ],
-        },
-        {
-            name: "Onigiri Thon Mayo",
-            prix: prix[2],
-            picture: "",
-            classes: [
-                "onigiri",
-                "poisson",
-                "oeuf",
-            ],
-            ingredients: [
-                "Boule de Riz",
-                " thon",
-                " mayonnaise",
-            ],
-        },
-    ]
+  let ingredients = document.createElement("span");
+  ingredients.classList.add("item");
+  ingredients.textContent = "ingrédients : " + plat.ingredients;
+  cardBody.appendChild(ingredients);
+  return card;
+}
 
+//#endregion
 
-    const menuRamen = [
-        {
-            name: "Ramen Boeuf",
-            prix: prix[6],
-            picture: "",
-            classes: [
-                "ramen",
-                "viande",
-            ],
-            ingredientss: [
-                "Bouillon de nouille",
-                " boeuf",
-                " soja",
-                " oignon ciboule",
-            ],
-        },
-        {
-            name: "Ramen Canard",
-            prix: prix[9],
-            picture: "",
-            classes: [
-                "ramen",
-                "volaille",
-                "crustace"
-            ],
-            ingredientss: [
-                "Bouillon de nouille",
-                " canard",
-                " oeuf",
-                " naruto",
-                " soja", 
-                " oignon ciboule",
-            ],
-        },
-        {
-            name: "Ramen Crevette",
-            prix: prix[8],
-            picture: "",
-            classes: [
-                "ramen",
-                "crustace",
-            ],
-            ingredientss: [
-                "Bouillon de nouille",
-                " crevette",
-                " soja",
-                " oignon ciboule",
-            ],
-        },
-        {
-            name: "Ramen Légumes",
-            prix: prix[6],
-            picture: "",
-            classes: [
-                "ramen",
-                "vege",
-            ],
-            ingredientss: [
-                "Bouillon de nouille",
-                " légumes",
-                " soja",
-                " oignon ciboule",
-            ],
-        },
-        {
-            name: "Ramen au poulet",
-            prix: prix[0],
-            picture: "",
-            classes: ["ramen", "volaille", "crustace"],
-            ingredients: [
-              "Bouillon de nouille",
-              " poulet",
-              " naruto",
-              " soja",
-              " oignon ciboule",
-            ],
-          },
-          {
-            name: "Ramen au porc",
-            prix: prix[0],
-            picture: "",
-            classes: ["ramen", "viande", "crustace"],
-            ingredientss: [
-              "Bouillon de nouille",
-              " porc",
-              " naruto",
-              " soja",
-              " oignon ciboule",
-            ],
-          },
-    ];
-    const menuBoissons = [
-        {
-          name: "Spa",
-          prix: prix[0],
-          picture: "",
-          classes: ["boisson", "non_petillant", "soft"],
-        },
-        {
-          name: "Chaudfontaine eau pétillante",
-          prix: prix[0],
-          picture: "",
-          classes: ["boisson", "petillant", "soft"],
-        },
-        {
-          name: "Coca Cola",
-          prix: prix[0],
-          picture: "",
-          classes: ["boisson", "petillant", "soft"],
-        },
-        {
-          name: "Coca Cola Zero",
-          prix: prix[0],
-          picture: "",
-          classes: ["boisson", "petillant", "soft"],
-        },
-        {
-          name: "Bière Asahi",
-          prix: prix[0],
-          picture: "",
-          classes: ["boisson", "petillant", "alcool"],
-        },
-        {
-          name: "Saké Shirakabegura kimoto junmai",
-          prix: prix[0],
-          picture: "",
-          classes: ["boisson", "non_petillant", "alcool"],
-        },
-        {
-          name: "Saké Rihaku Le Poète errant",
-          prix: prix[0],
-          picture: "",
-          classes: ["boisson", "non_petillant", "alcool"],
-        },
-      ];
-      
-
-    const menuDessert = [
-        {
-            name: "Cheesecake",
-            prix: prix[0],
-            picture: "",
-            classes: [
-                "dessert",
-                "lactose",
-                "vege",
-            ],
-        },
-        {
-            name: "Moelleux au Chocolat",
-            prix: prix[2],
-            picture: "",
-            classes: [
-                "dessert",
-                "lactose",
-                "vege",
-            ],
-        },
-        {
-            name: "Mousse au chocolat",
-            prix: prix[2],
-            picture: "",
-            classes: [
-                "dessert",
-                "lactose",
-                "vege",
-            ],
-        },
-        {
-            name: "Mochi Glacé Mangue",
-            prix: prix[4],
-            picture: "",
-            classes: [
-                "dessert",
-                "lactose",
-                "vege",
-            ],
-        },
-        {
-            name: "Mochi Glacé Coco",
-            prix: prix[4],
-            picture: "",
-            classes: [
-                "dessert",
-                "lactose",
-                "vege",
-            ],
-        },
-        {
-            name: "Salade de Fruits du Moment",
-            prix: prix[2],
-            picture: "",
-            classes: [
-                "dessert",
-                "vege",
-            ],
-        },
-        {
-            name: "Mangue Fraîche",
-            prix: prix[0],
-            picture: "",
-            classes: [
-                "dessert",
-                "vege",
-            ],
-        },
-      
-    ];
-
-const fullMenu = [menuSushi, menuMaki, menuRolls, menuSashimi, menuOnigiri, menuRamen, menuBoissons, menuDessert];
-
+const bouton = document.body.querySelector("#darkmode");
+const body = document.querySelector("body");
 const main = document.querySelector("main");
 
-fullMenu.forEach((elem) => {
-elem.forEach((object) => {
-	const card = document.createElement("div");
-    card.setAttribute("class","card");
-    object.classes.forEach((e) => {
-	    card.classList.add(e);
+bouton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});
+
+// affichageHtml(fullMenu);
+// affichageHtml([sortMenu(fullMenu)]);
+// affichageHtml([filterMenu(fullMenu, ["poisson", ""])]);
+
+// listerPlat(sortMenu(fullMenu));
+/*
+// ajout d'un bouton "ajout au panier sur les cards"
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card) {
+  const addButton = card.querySelector(".btnPanier");
+
+  addButton.addEventListener("click", function() {
+  });
+
+});
+
+
+// Define an object with items
+const items = [
+    { id: 1, name: 'Item 1', price: 10 },
+    { id: 2, name: 'Item 2', price: 20 },
+    { id: 3, name: 'Item 3', price: 30 },
+  ];
+  
+  // Get the cart element from the HTML
+  const cart = document.getElementById('cart');
+  
+  // Initialize the cart state
+  let cartItems = [];
+  
+  // Add an item to the cart
+  function addToCart(itemId) {
+    const item = items.find(item => item.id === itemId);
+    if (item) {
+      cartItems.push(item);
+      updateCart();
+    }
+  }
+  
+  // Remove an item from the cart
+  function removeFromCart(index) {
+    cartItems.splice(index, 1);
+    updateCart();
+  }
+  
+  // Update the cart interface
+  function updateCart() {
+    const cartItemsElement = document.getElementById('cart-items');
+    cartItemsElement.innerHTML = '';
+  
+    for (let i = 0; i < cartItems.length; i++) {
+      const item = cartItems[i];
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `${item.name} - $${item.price}`;
+      const removeButton = document.createElement('button');
+      removeButton.innerHTML = 'Remove';
+      removeButton.addEventListener('click', () => removeFromCart(i));
+      listItem.appendChild(removeButton);
+      cartItemsElement.appendChild(listItem);
+    }
+  }
+  
+  // Listen for clicks on the Add to Cart buttons
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const itemId = parseInt(button.dataset.itemId);
+      addToCart(itemId);
     });
-
-
-	let picture = document.createElement("img");
-	picture.classList.add("img");
-	picture.src = object.picture;
-	card.appendChild(picture);
-
-	let cardBody = document.createElement("div");
-	cardBody.classList.add("card-body");
-	card.appendChild(cardBody);
-
-	let name = document.createElement("h2");
-	name.classList.add("h2");
-	name.textContent = object.name;
-	cardBody.appendChild(name);
-
-	let prix = document.createElement("span");
-	prix.classList.add("item");
-	prix.textContent = "Prix : " + object.prix;
-	cardBody.appendChild(prix);
-
-
-	let classes = document.createElement("span");
-	classes.classList.add("item");
-	classes.textContent = "Catégories : " + object.classes;
-	cardBody.appendChild(classes);
-
-	let ingredients = document.createElement("span");
-	ingredients.classList.add("item");
-	ingredients.textContent = "ingrédients : " + object.ingredients;
-	cardBody.appendChild(ingredients);
-
-
-	main.appendChild(card);
-});
-});
+  });
+  
+  // Listen for clicks on the checkout button
+  const checkoutButton = document.getElementById('checkout');
+  checkoutButton.addEventListener('click', () => {
+    // Implement the checkout process here
+  });
+  
+*/
