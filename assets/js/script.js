@@ -36,8 +36,10 @@ function listerPlat(plat) {
   cardBody.appendChild(name);
 
   let prix = document.createElement("span");
+
+  prix.innerHTML = `<span class="prixArticle ">Prix</span> :  ${plat.prix} €`;
   prix.classList.add("item");
-  prix.textContent = "Prix : " + plat.prix + " €";
+  // prix.textContent = "Prix : " + plat.prix + " €";
   cardBody.appendChild(prix);
 
   let categorie = document.createElement("span");
@@ -56,13 +58,6 @@ function filterMenu(listMenu, tags) {
   listMenu.forEach((menu) => {
     menu.forEach((plat) => {
       plat.categorie.forEach((element) => {
-=======
-function filter(listMenu, tags) {
-  let monTableau = new Array();
-  listMenu.forEach((menu) => {
-    menu.forEach((plat) => {
-      plat.categories.forEach((element) => {
-
         if (tags.includes(element)) {
           monTableau.push(plat);
         }
@@ -95,7 +90,6 @@ const main = document.querySelector("main");
 bouton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 });
-
 
 affichageHtml(fullMenu);
 

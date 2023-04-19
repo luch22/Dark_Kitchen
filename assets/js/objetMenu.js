@@ -60,7 +60,7 @@ const menuMaki = [
     name: "Maki Avocat",
     prix: prix[0],
     picture: "",
-    categorie: ["maki", "vege"]
+    categorie: ["maki", "vege"],
     ingredients: ["Base riz-nori", " avocat"],
   },
   {
@@ -330,7 +330,7 @@ const menuBoissons = [
   {
     name: "Spa",
     prix: prix[0],
-    picture: "",  
+    picture: "",
     categorie: ["boisson", "non_petillant", "soft"],
   },
   {
