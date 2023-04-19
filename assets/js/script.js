@@ -37,7 +37,7 @@ function listerPlat(plat) {
 
   let prix = document.createElement("span");
   prix.classList.add("item");
-  prix.textContent = "Prix : " + plat.prix;
+  prix.textContent = "Prix : " + plat.prix + " €";
   cardBody.appendChild(prix);
 
   let categorie = document.createElement("span");
