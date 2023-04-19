@@ -22,7 +22,7 @@ bouton.addEventListener("click", () => {
 console.log(bouton.getAttribute("type"));
 
 /*The Collection Array: contain all cards data*/
-let prix = ["2€", "2,5€", "3,5€", "4€", "5€", "7€", "8€", "9€", "10€", "12€"];
+let prix = [2, 2.5, 3.5, 4, 5, 7, 8, 9, 10, 12];
 
 const menuSushi = [
   {
@@ -457,7 +457,7 @@ fullMenu.forEach((elem) => {
 
     let prix = document.createElement("span");
     prix.classList.add("item");
-    prix.textContent = "Prix : " + object.prix;
+    prix.textContent = "Prix : " + object.prix + "€";
     cardBody.appendChild(prix);
 
     let classes = document.createElement("span");
