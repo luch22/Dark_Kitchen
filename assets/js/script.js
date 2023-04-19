@@ -1,5 +1,5 @@
 /*The Collection Array: contain all cards data*/
-let prix = [2, 25, 35, 4, 5, 7, 8, 9, 10, 12]
+let prix = ["2€", "2,5€", "3,5€", "4€", "5€", "7€", "8€", "9€", "10€", "12€"]
 
 const menuSushi = [
     {
@@ -456,7 +456,7 @@ const menuOnigiri = [
                 "ramen",
                 "viande",
             ],
-            ingredients: [
+            ingredientss: [
                 "Bouillon de nouille",
                 " boeuf",
                 " soja",
@@ -472,7 +472,7 @@ const menuOnigiri = [
                 "volaille",
                 "crustace"
             ],
-            ingredients: [
+            ingredientss: [
                 "Bouillon de nouille",
                 " canard",
                 " oeuf",
@@ -489,7 +489,7 @@ const menuOnigiri = [
                 "ramen",
                 "crustace",
             ],
-            ingredients: [
+            ingredientss: [
                 "Bouillon de nouille",
                 " crevette",
                 " soja",
@@ -504,7 +504,7 @@ const menuOnigiri = [
                 "ramen",
                 "vege",
             ],
-            ingredients: [
+            ingredientss: [
                 "Bouillon de nouille",
                 " légumes",
                 " soja",
@@ -516,7 +516,7 @@ const menuOnigiri = [
             prix: prix[0],
             picture: "",
             classes: ["ramen", "volaille", "crustace"],
-            ingredient: [
+            ingredients: [
               "Bouillon de nouille",
               " poulet",
               " naruto",
@@ -529,7 +529,7 @@ const menuOnigiri = [
             prix: prix[0],
             picture: "",
             classes: ["ramen", "viande", "crustace"],
-            ingredient: [
+            ingredientss: [
               "Bouillon de nouille",
               " porc",
               " naruto",
@@ -663,8 +663,10 @@ const main = document.querySelector("main");
 fullMenu.forEach((elem) => {
 elem.forEach((object) => {
 	const card = document.createElement("div");
-	card.classList.add("card");
-
+    card.setAttribute("class","card");
+    object.classes.forEach((e) => {
+	    card.classList.add(e);
+    });
 
 
 	let picture = document.createElement("img");
@@ -694,7 +696,7 @@ elem.forEach((object) => {
 
 	let ingredients = document.createElement("span");
 	ingredients.classList.add("item");
-	ingredients.textContent = "Ingredients : " + object.ingredients;
+	ingredients.textContent = "ingrédients : " + object.ingredients;
 	cardBody.appendChild(ingredients);
 
 
