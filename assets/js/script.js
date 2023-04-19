@@ -1,3 +1,13 @@
+
+const bouton = document.body.querySelector("#darkmode")
+const body = document.querySelector('body');
+
+bouton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+});
+
+console.log(bouton.getAttribute("type"));
+
 /*The Collection Array: contain all cards data*/
 let prix = ["2€", "2,5€", "3,5€", "4€", "5€", "7€", "8€", "9€", "10€", "12€"]
 
