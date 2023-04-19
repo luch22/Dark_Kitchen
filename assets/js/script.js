@@ -470,6 +470,21 @@ fullMenu.forEach((elem) => {
     ingredients.textContent = "ingrédients : " + object.ingredients;
     cardBody.appendChild(ingredients);
 
+    let button = document.createElement("button");
+    button.classList.add("btnPanier");
+    cardBody.appendChild(button);
+
     main.appendChild(card);
   });
 });
+// ajout d'un bouton "ajout au panier sur les cards"
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card) {
+  const addButton = card.querySelector(".btnPanier");
+
+  addButton.addEventListener("click", function() {
+  });
+
+});
+
