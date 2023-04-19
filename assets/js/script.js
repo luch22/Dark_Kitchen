@@ -1,6 +1,34 @@
 import { fullMenu } from "./objetMenu.js";
 
 //#region Function
+function filterMenu(listMenu, tags) {
+  let monTableau = new Array();
+  listMenu.forEach((menu) => {
+    menu.forEach((plat) => {
+      plat.categorie.forEach((element) => {
+        if (tags.includes(element)) {
+          monTableau.push(plat);
+        }
+      });
+    });
+  });
+  return monTableau;
+}
+
+function sortMenu(listMenu) {
+  let monTableau = new Array();
+  listMenu.forEach((menu) => {
+    menu.forEach((plat) => {
+      monTableau.push(plat);
+    });
+  });
+  console.log(monTableau.length);
+  monTableau.sort(function (a, b) {
+    return a.prix - b.prix;
+  });
+  return monTableau;
+}
+
 function affichageHtml(listMenu) {
   listMenu.forEach((menu) => {
     let catmenu = menu[0].categorie[0];
@@ -53,33 +81,6 @@ function listerPlat(plat) {
   cardBody.appendChild(ingredients);
   return card;
 }
-function filterMenu(listMenu, tags) {
-  let monTableau = new Array();
-  listMenu.forEach((menu) => {
-    menu.forEach((plat) => {
-      plat.categorie.forEach((element) => {
-        if (tags.includes(element)) {
-          monTableau.push(plat);
-        }
-      });
-    });
-  });
-  return monTableau;
-}
-
-function sortMenu(listMenu) {
-  let monTableau = new Array();
-  listMenu.forEach((menu) => {
-    menu.forEach((plat) => {
-      monTableau.push(plat);
-    });
-  });
-  console.log(monTableau.length);
-  monTableau.sort(function (a, b) {
-    return a.prix - b.prix;
-  });
-  return monTableau;
-}
 
 //#endregion
 
@@ -91,8 +92,11 @@ bouton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 });
 
-affichageHtml(fullMenu);
+// affichageHtml(fullMenu);
+// affichageHtml([sortMenu(fullMenu)]);
+// affichageHtml([filterMenu(fullMenu, ["poisson", ""])]);
 
+// listerPlat(sortMenu(fullMenu));
 /*
 // ajout d'un bouton "ajout au panier sur les cards"
 const cards = document.querySelectorAll(".card");
