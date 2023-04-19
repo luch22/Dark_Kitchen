@@ -27,6 +27,7 @@ const menuSushi = [
     name: "Sushi Oeuf",
     prix: prix[0],
     picture: "",
+
     categorie: ["sushi", "oeuf"],
     ingredients: ["Base riz", " oeuf"],
   },
@@ -59,7 +60,7 @@ const menuMaki = [
     name: "Maki Avocat",
     prix: prix[0],
     picture: "",
-    categorie: ["maki", "vege"],
+    categorie: ["maki", "vege"]
     ingredients: ["Base riz-nori", " avocat"],
   },
   {
@@ -80,6 +81,7 @@ const menuMaki = [
     name: "Maki Concombre",
     prix: prix[0],
     picture: "",
+
     categorie: ["maki", "vege"],
     ingredients: ["Base riz-nori", " concombre"],
   },
@@ -125,6 +127,7 @@ const menuRolls = [
     name: "California Pacific",
     prix: prix[0],
     picture: "",
+
     categorie: ["rolls", "poisson"],
     ingredients: ["Base riz-nori", " saumon", " avocat", " ciboulette"],
   },
@@ -132,6 +135,7 @@ const menuRolls = [
     name: "California Saumon Avocat",
     prix: prix[2],
     picture: "",
+
     categorie: ["rolls", "poisson", "lactose"],
     ingredients: ["Base riz-nori", " saumon", " avocat"],
   },
@@ -139,6 +143,7 @@ const menuRolls = [
     name: "Daurade Wasabi",
     prix: prix[3],
     picture: "",
+
     categorie: ["rolls", "poisson", "piquant"],
     ingredients: ["Base riz-nori", " daurade", " wasabi"],
   },
@@ -146,6 +151,7 @@ const menuRolls = [
     name: "Dengaku Roll",
     prix: prix[0],
     picture: "",
+
     categorie: ["rolls", "vege", "piquant"],
     ingredients: ["Base riz-nori", " sésame", " wasabi", " aubergine"],
   },
@@ -163,6 +169,7 @@ const menuSashimi = [
     name: "Sashimi Assortiment",
     prix: prix[7],
     picture: "",
+
     categorie: ["sashimi", "poisson", "vege"],
     ingredients: ["Tranche de saumon, thon et légume", " soja"],
   },
@@ -170,6 +177,7 @@ const menuSashimi = [
     name: "Sashimi Légume",
     prix: prix[4],
     picture: "",
+
     categorie: ["sashimi", "vege"],
     ingredients: ["Tranche de légume", " soja"],
   },
@@ -184,6 +192,7 @@ const menuSashimi = [
     name: "Sashimi Thon 5pcs",
     prix: prix[9],
     picture: "",
+
     categorie: ["sashimi", "poisson"],
     ingredients: ["Tranche de thon", " soja"],
   },
@@ -201,6 +210,7 @@ const menuOnigiri = [
     name: "Onigiri Nature",
     prix: prix[3],
     picture: "",
+
     categorie: ["onigiri", "vegan"],
     ingredients: ["Boule de riz", " sésame"],
   },
@@ -215,6 +225,7 @@ const menuOnigiri = [
     name: "Onigiri Saumon",
     prix: prix[3],
     picture: "",
+
     categorie: ["onigiri", "poisson"],
     ingredients: ["Boule de riz", " saumon"],
   },
@@ -222,6 +233,7 @@ const menuOnigiri = [
     name: "Onigiri Thon",
     prix: prix[2],
     picture: "",
+
     categorie: ["onigiri", "poisson"],
     ingredients: ["Boule de Riz", " thon rouge"],
   },
@@ -229,6 +241,7 @@ const menuOnigiri = [
     name: "Onigiri Thon Mayo",
     prix: prix[2],
     picture: "",
+
     categorie: ["onigiri", "poisson", "oeuf"],
     ingredients: ["Boule de Riz", " thon", " mayonnaise"],
   },
@@ -239,6 +252,7 @@ const menuRamen = [
     name: "Ramen Boeuf",
     prix: prix[6],
     picture: "",
+
     categorie: ["ramen", "viande"],
     ingredientss: ["Bouillon de nouille", " boeuf", " soja", " oignon ciboule"],
   },
@@ -246,6 +260,7 @@ const menuRamen = [
     name: "Ramen Canard",
     prix: prix[9],
     picture: "",
+
     categorie: ["ramen", "volaille", "crustace"],
     ingredientss: [
       "Bouillon de nouille",
@@ -260,6 +275,7 @@ const menuRamen = [
     name: "Ramen Crevette",
     prix: prix[8],
     picture: "",
+
     categorie: ["ramen", "crustace"],
     ingredientss: [
       "Bouillon de nouille",
@@ -272,6 +288,7 @@ const menuRamen = [
     name: "Ramen Légumes",
     prix: prix[6],
     picture: "",
+
     categorie: ["ramen", "vege"],
     ingredientss: [
       "Bouillon de nouille",
@@ -284,6 +301,7 @@ const menuRamen = [
     name: "Ramen au poulet",
     prix: prix[0],
     picture: "",
+
     categorie: ["ramen", "volaille", "crustace"],
     ingredients: [
       "Bouillon de nouille",
@@ -297,6 +315,7 @@ const menuRamen = [
     name: "Ramen au porc",
     prix: prix[0],
     picture: "",
+
     categorie: ["ramen", "viande", "crustace"],
     ingredientss: [
       "Bouillon de nouille",
@@ -311,7 +330,7 @@ const menuBoissons = [
   {
     name: "Spa",
     prix: prix[0],
-    picture: "",
+    picture: "",  
     categorie: ["boisson", "non_petillant", "soft"],
   },
   {
@@ -339,13 +358,13 @@ const menuBoissons = [
     categorie: ["boisson", "petillant", "alcool"],
   },
   {
-    name: "Saké Shirakabegura kimoto junmai",
+    name: "Saké Shirakabegura",
     prix: prix[0],
     picture: "",
     categorie: ["boisson", "non_petillant", "alcool"],
   },
   {
-    name: "Saké Rihaku Le Poète errant",
+    name: "Saké Rihaku Le Poète Errant",
     prix: prix[0],
     picture: "",
     categorie: ["boisson", "non_petillant", "alcool"],
@@ -366,33 +385,38 @@ const menuDessert = [
     categorie: ["dessert", "lactose", "vege"],
   },
   {
-    name: "Mousse au chocolat",
+    name: "Mousse au Chocolat",
     prix: prix[2],
     picture: "",
+
     categorie: ["dessert", "lactose", "vege"],
   },
   {
     name: "Mochi Glacé Mangue",
     prix: prix[4],
     picture: "",
+
     categorie: ["dessert", "lactose", "vege"],
   },
   {
     name: "Mochi Glacé Coco",
     prix: prix[4],
     picture: "",
+
     categorie: ["dessert", "lactose", "vege"],
   },
   {
     name: "Salade de Fruits du Moment",
     prix: prix[2],
     picture: "",
+
     categorie: ["dessert", "vege"],
   },
   {
     name: "Mangue Fraîche",
     prix: prix[0],
     picture: "",
+
     categorie: ["dessert", "vege"],
   },
 ];
