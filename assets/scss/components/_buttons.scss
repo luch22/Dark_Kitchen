@@ -68,3 +68,19 @@ main.dark-mode {
     padding: 5px;
   }
 }
+//filter
+.listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    float: left;
+    border: 3px solid rgba(192, 14, 14, 0.849);
+    border-radius: 10px 10px 0 0;
+    background-color: #21ecf3;
+    box-shadow: 0 -3px 3px 3px rgba(0, 0, 0, 0.185);
+    padding: 5px;
+    font-size: 1.5em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}}
