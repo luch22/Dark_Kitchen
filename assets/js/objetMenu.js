@@ -255,7 +255,7 @@ const menuOnigiri = [
   {
     name: "Onigiri Thon Mayonnaise",
     prix: prix[2],
-    picture:"/images/onigir-thon-mayo.jpeg",
+    picture:"",
 
     categorie: ["onigiri", "poisson", "oeuf"],
     ingredients: ["Boule de Riz", " thon", " mayonnaise"],
