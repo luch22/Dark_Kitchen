@@ -1,0 +1,339 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(127, 255, 212, 0.575);
+}
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .toggle {
+  margin: 25px 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+main {
+  height: auto;
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  width: 250px;
+  height: 360px;
+  margin: 25px 25px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgba(78, 238, 113, 0.2);
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.img {
+  height: 130px;
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 230px;
+}
+.card-body .h2 {
+  font-size: 2em;
+  font-weight: 600;
+  -webkit-text-decoration: underline darkcyan;
+          text-decoration: underline darkcyan;
+  text-align: center;
+  margin: 0 8px 10px 8px;
+}
+.card-body .item {
+  margin: 5px 0;
+  text-align: center;
+  line-height: 20px;
+  font-size: 1.3em;
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 400px) {
+  main {
+    min-width: 400px;
+  }
+  main section {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+  }
+}
+.toggle {
+  --width: 80px;
+  --height: calc(var(--width) / 3);
+  position: relative;
+  display: inline-block;
+  width: var(--width);
+  height: var(--height);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: var(--height);
+  cursor: pointer;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--height);
+  background-color: #ccc;
+  transition: all 0.4s ease-in-out;
+}
+
+.toggle .slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--height));
+  height: calc(var(--height));
+  border-radius: calc(var(--height) / 2);
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+.toggle input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.toggle input:checked + .slider::before {
+  transform: translateX(calc(var(--width) - var(--height)));
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1195a1;
+}
+.listTri li {
+  text-transform: capitalize;
+  cursor: pointer;
+  float: left;
+  border: 0.5px solid lightgray;
+  padding: 5px;
+}
+
+.listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.listTri li {
+  float: left;
+  border: 3px solid rgba(192, 14, 14, 0.849);
+  border-radius: 10px 10px 0 0;
+  background-color: #21ecf3;
+  box-shadow: 0 -3px 3px 3px rgba(0, 0, 0, 0.185);
+  padding: 5px;
+  font-size: 1.5em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(127, 255, 212, 0.575);
+}
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .toggle {
+  margin: 25px 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+main {
+  height: auto;
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  width: 250px;
+  height: 360px;
+  margin: 25px 25px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgba(78, 238, 113, 0.2);
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.img {
+  height: 130px;
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 230px;
+}
+.card-body .h2 {
+  font-size: 2em;
+  font-weight: 600;
+  -webkit-text-decoration: underline darkcyan;
+          text-decoration: underline darkcyan;
+  text-align: center;
+  margin: 0 8px 10px 8px;
+}
+.card-body .item {
+  margin: 5px 0;
+  text-align: center;
+  line-height: 20px;
+  font-size: 1.3em;
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 400px) {
+  main {
+    min-width: 400px;
+  }
+  main section {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+  }
+}
+header {
+  background-image: url("/images/banquet.jpeg");
+}/*# sourceMappingURL=main.css.map */
