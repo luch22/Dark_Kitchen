@@ -94,17 +94,30 @@ function listerPlat(plat) {
 }
 function displayedcart() {
   console.log(cartItems);
+  let divcart = document.createElement("div");
+    divcart.setAttribute("class","container_cart")
   cartItems.forEach((plat) => {
-    console.log(plat);
-      let spanName = document.createElement("span");
-      let spanPrix = document.createElement("span");
-      spanName.textContent = plat.children[0].innerHTML;
-      console.log(plat.children[2].innerHTML.slice(parseInt(plat.children[2].innerHTML.length)-4,plat.children[2].innerHTML.length - 1));
+    let spanName = document.createElement("span");
+    let spanPrix = document.createElement("span");
+    spanName.setAttribute("class","name_item_cart")  
+    spanPrix.setAttribute("class","price_item_cart")  
+    fullMenu.forEach((platSource)=> {
+      platSource.forEach((e) =>{
+        if (e.name == plat.children[0].innerHTML) {
+          spanName.textContent = e.name;
+          spanPrix.textContent = e.prix;
+        }
+
+      })
+
+    })
+    divcart.append(spanName,spanPrix);
     
-    let divcart = document.createElement("div");
+    
 
 
    })
+   body.append(divcart);
   // cartItems.forEach(plat => {
   //   let divcart = document.createElement("div");
   //   plat.forEach(item => {
@@ -229,9 +242,6 @@ let cartItems = [];
 darkMode();
 affichageHtml(fullMenu);
 listertrier();
-
-
-
 
 
 
