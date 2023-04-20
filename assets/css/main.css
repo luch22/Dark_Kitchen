@@ -212,6 +212,8 @@ body.dark-mode {
   background-color: #1195a1;
 }
 .listTri li {
+  text-transform: capitalize;
+  cursor: pointer;
   float: left;
   border: 0.5px solid lightgray;
   padding: 5px;

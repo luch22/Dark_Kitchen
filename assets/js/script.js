@@ -81,6 +81,11 @@ function listerPlat(plat) {
   cardBody.appendChild(ingredients);
   return card;
 }
+function cleanHTML() {
+  main.querySelectorAll("section").forEach((element) => {
+    element.remove();
+  });
+}
 
 const listTri = document.querySelector(".listTri");
 for (const iterator of listTri.children) {
@@ -89,29 +94,49 @@ for (const iterator of listTri.children) {
 }
 listTri.addEventListener("click", (e) => {
   switch (e.target.classList[0]) {
+    case "menu":
+      cleanHTML();
+      affichageHtml(fullMenu);
+      break;
     case "sushi":
-      console.log("sushi");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
     case "maki":
-      console.log("maki");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
     case "rolls":
-      console.log("rolls");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
     case "sashimi":
-      console.log("sashimi");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
     case "onigiri":
-      console.log("onigiri");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
     case "ramen":
-      console.log("ramen");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
     case "boisson":
-      console.log("boisson");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
     case "dessert":
-      console.log("dessert");
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
       break;
 
     default:

@@ -61,6 +61,8 @@ body.dark-mode {
   padding: 0;
   background-color: #1195a1;
   li {
+    text-transform: capitalize;
+    cursor: pointer;
     float: left;
     border: 0.5px solid lightgray;
     padding: 5px;
