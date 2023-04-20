@@ -75,17 +75,6 @@ header h1 {
 header .toggle {
   margin: 25px 0;
 }
-header .listTri {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #1195a1;
-}
-header .listTri li {
-  float: left;
-  border: 0.5px solid lightgray;
-  padding: 5px;
-}
 
 body {
   margin: 0;
@@ -199,7 +188,7 @@ main {
 }
 
 .toggle input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 .toggle input:checked + .slider::before {
@@ -214,6 +203,18 @@ body {
 body.dark-mode {
   background-color: #333333;
   color: #ffffff;
+}
+
+.listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1195a1;
+}
+.listTri li {
+  float: left;
+  border: 0.5px solid lightgray;
+  padding: 5px;
 }
 
 ::before,
@@ -238,17 +239,6 @@ header h1 {
 }
 header .toggle {
   margin: 25px 0;
-}
-header .listTri {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #1195a1;
-}
-header .listTri li {
-  float: left;
-  border: 0.5px solid lightgray;
-  padding: 5px;
 }
 
 body {
