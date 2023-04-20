@@ -8,21 +8,38 @@
 }
 
 header {
-  padding-top: 40px;
+  background-image: url("/images/header_background.png");
+  background-repeat: no-repeat;
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(127, 255, 212, 0.575);
-  h1 {
-    text-align: center;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  justify-content: space-around;
+  
+  
+
+  
+}
+header {
   .toggle {
     margin: 25px 0;
+    flex-direction: column-reverse;
+    position:relative;
+  }
+
+  .cart {
+    justify-content: flex-end;
+    flex-direction: column-reverse;
   }
 }
+.cart-toggle {
+  position:relative;
+  display: grid;
+  align-items: stretch;
+  justify-content: flex-end;
+ 
+  
+}
+
+  
+
 body {
   margin: 0;
   padding: 0;
@@ -76,11 +93,31 @@ main {
     font-size: 1.3em;
     padding: 0 5px;
   }
+.footer-logos {
+  width: 399px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+
+}
+}
+.footer-logos {
+  img {
+    width: 75px;
+  }
 }
 //responsive
 @media screen and (max-width: 400px) {
   main {
     max-width: 400px;
+  }
+  .logoHeader {
+    width: 200px;
+    height: 200px;
+  }
+  .cart-toogle {
+    display: block;
+
   }
 }
 @media screen and (min-width: 400px) {
@@ -90,5 +127,10 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     min-width: 400px;
+  }
+  .logoHeader {
+    width: 200px;
+    height: 200px;
+   
   }
 } ;

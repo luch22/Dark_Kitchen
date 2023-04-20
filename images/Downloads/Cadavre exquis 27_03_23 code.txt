@@ -1,0 +1,113 @@
+willy@DESKTOP-NGJ1REL:~$ ls
+willy@DESKTOP-NGJ1REL:~$ mkdir CadavreExquis
+willy@DESKTOP-NGJ1REL:~$ cd CadavreExquis
+willy@DESKTOP-NGJ1REL:~/CadavreExquis$ mkdir willy ; mkdir marine ; mkdir alex ; mkdir ismael ; mkdir delphine
+willy@DESKTOP-NGJ1REL:~/CadavreExquis$ ls
+alex  delphine  ismael  marine  willy
+willy@DESKTOP-NGJ1REL:~/CadavreExquis$ cd willy
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy$ cat ~/.ssh/id_rsa.pub
+cat: /home/willy/.ssh/id_rsa.pub: No such file or directory
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy$ git clone git@github.com:will1490/exercise-exquisite-corpse.git
+Cloning into 'exercise-exquisite-corpse'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy$ ssh-keygen -t rsa -b 4096 -C willseghers@gmail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/willy/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/willy/.ssh/id_rsa
+Your public key has been saved in /home/willy/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:suSBVjwL2t9dbIdSRyjiQakMELJJsZeVF3d011kUJ+E willseghers@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|.o+o ..ooo.o o+=O|
+|.+. +o .= o oo.oo|
+|o. o.o=o o .. E  |
+|  .o +oo.  o o   |
+|  . + = S . = .  |
+|   . + = . + .   |
+|      + . .      |
+|                 |
+|                 |
++----[SHA256]-----+
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy$ ssh-keygen -t rsa -b 4096 -C willseghers@gmail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/willy/.ssh/id_rsa): keywil
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in keywil
+Your public key has been saved in keywil.pub
+The key fingerprint is:
+SHA256:30J9AoJeiRc7FBSlt9/1x4EokRd/jSVJdNy9BZfSX4s willseghers@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|       .*+.. o*+B|
+|       + =. o..OB|
+|      o Ooo. .+.B|
+|     . o +o+.Eoo.|
+|      . S.o.o....|
+|         o.o + oo|
+|          o o . +|
+|           .    .|
+|                 |
++----[SHA256]-----+
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqpdlvFuLa4HtPjo8iP8twGXPgYlofHCbl1bUbbc0EwAmZSdAQJGyzdWfNm9lAVAoFV+tMhBW5BuApawDtdJx/uy6C9Pg6uRRhF8CYuQs47pK1gXIJ4mZbaVXGNzWIb0WG4KT2U7omjEB7TBvwCNH27kbzFPjxGxS5JOITAtOfTXcU4aEnC83pip/G6T6oEEOaDhFPRgganqqFTNBg/d3BM+sqml0m9QEpGVCgoiKSvwxf1Rtt+P0YOcYvvu4tcF9E6/6L8UuulVDbvalgp92s45QRBhYcaYNERx/9A3vYBjiHBovzsrs3XMLWoviLzXCe6v3ienVVz3Z+IaEETk7W9afqOp54aZQKn1dUxk7Umdu06g/IkgnEQo+SXMdiSXvXW2CTVQeVwQYFPLrr3hFBC6Z8t6VpOaQu5lBuYqE4mivD08hZZltZG8aVCrjDfCbMwwuypuZf9mSMwTBEs5TiT+5fe61di5Dz01hrmaODn7qMuRTe79GOk2OX3w2CMOAq6Bzmo4BLHMRdYAHLEeD9veA76uGuJT+1d10kfhsdCewVZsKhjX5llkaWkHtcL1D6qJtMyaxxSN1D7OGzrvHh/4vLGb5dX+WoL/4JGnWUQaajV5ATLSCI+S5ITRxJToyU+iy2xgjh1EnZT4zTQQ+HPCVS9fsbfD7ruDdRzZYy4w== willseghers@gmail.com
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy$ git clone git@github.com:will1490/exercise-exquisite-corpse.git
+Cloning into 'exercise-exquisite-corpse'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy$ cd exercise-exquisite-corpse
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git branch development
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git checkout development
+Switched to branch 'development'
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ nano README.md
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git commit
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <willy@DESKTOP-NGJ1REL.>) not allowed
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git config --global user.email willseghers@gmail.com
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git config --global user.name willy
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git commit
+On branch development
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git add README.md
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git commit -m "Contribution de Willy"
+[development 42d29a6] Contribution de Willy
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$ git push origin development
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 455 bytes | 227.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'development' on GitHub by visiting:
+remote:      https://github.com/will1490/exercise-exquisite-corpse/pull/new/developmen
+remote:
+To github.com:will1490/exercise-exquisite-corpse.git
+ * [new branch]      development -> development
+willy@DESKTOP-NGJ1REL:~/CadavreExquis/willy/exercise-exquisite-corpse$

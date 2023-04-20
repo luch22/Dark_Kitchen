@@ -34,7 +34,7 @@ function affichageHtml(listMenu) {
     let catmenu = menu[0].categorie[0];
     let sectionParent = document.createElement("section");
     sectionParent.setAttribute("class", catmenu);
-    sectionParent.innerHTML = `<h3>${catmenu}</h3>  `;
+    sectionParent.innerHTML = `<img src="">${catmenu}  `;
     menu.forEach((plat) => {
       sectionParent.append(listerPlat(plat));
       main.append(sectionParent);
@@ -92,7 +92,7 @@ bouton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 });
 
-// affichageHtml(fullMenu);
+affichageHtml(fullMenu);
 // affichageHtml([sortMenu(fullMenu)]);
 // affichageHtml([filterMenu(fullMenu, ["poisson", ""])]);
 

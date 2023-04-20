@@ -1,0 +1,31 @@
+Commandes Linux : 
+
+man man = ouvrir le manuel
+cd +*nom du répertoire* = changer de répertoire ("cd" revenir au répertoire précédent)
+ls = afficher le contenu du répertoire en cours (ou de l'élément spécifié)
+pwd = afficher chemin d'accès à un répertoire
+dirs = donner le nom du répertoire en cours
+pushd = Ajouter le répertoire à la pile (remplir la pile)
+popd = Supprimer un répertoire de la pile
+cat = créer, de fusionner ou d'imprimer des fichiers dans l'écran de résultat standard ou vers un autre fichier
+touch = modifier le timestamp d'un fichier + créer un fichier (touch + *nom de fichier.extension*)
+mkdir = créer un répertoire
+mv(move) = déplacer des fichiers et dossiers d'une source vers une destination. + renommer un élément.
+cp(copy) = copier fichier ou répertoire
+rm = Supprimer fichier 
+rm -r = supprimer répertoire + fichier
+rmdir = supprimer un répertoire vide
+more = Afficher le contenu d'un fichier
+sudo = permet de lancer en tant qu'administrateur
+chmod = sert à attribuer, changer, modifier ou supprimer les permissions de fichiers/répertoires / r (lecture) = 4  w (écriture) = 2  x (exécution) = 1 exemple : chmod 744 fichier.txt/ chmod [OPTIONS] [ u g o a ]  [ – + = ] [ r, w, x ] fichier
+u (user) / g (group) / o (other) / a (all) 
+drapeaux = - Supprimer les autorisation / + Ajouter des autorisation / = Attribue des autorisation distinctes et supprimer les précédente 
+ls -lh "fichier" = lire les permissions actif 
+sudo chown *root* *fichier* = change le propriétaire de *fichier* en « root »
+sudo chgrp *root* *fichier* = change le groupe de *fichier* en « root »
+echo = permet de mettre du texte dans un fichier / echo "blablabla" > text.txt (\n) = retour à la ligne
+nano *fichier* = ouvrir et crée le fichier
+CTRL+X = quitter nano -> Y/N = sauvegarder changements -> ENTER
+vim => :q! = permet de quitter sans save les changement / :wq = permet de save et quitter 
+"a" et "i" permet d'éditer le texte / "escape" pour revenir en mode normal
+"x" de supprimer les caractères 
