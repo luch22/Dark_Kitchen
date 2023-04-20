@@ -85,10 +85,13 @@ main {
 }
 @media screen and (min-width: 400px) {
   main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
     min-width: 400px;
+    section{
+      margin-top: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: first baseline;
+    }
   }
 } ;
+

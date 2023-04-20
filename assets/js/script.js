@@ -6,7 +6,7 @@ function filterMenu(listMenu, tags) {
   listMenu.forEach((menu) => {
     menu.forEach((plat) => {
       plat.categorie.forEach((element) => {
-        if (tags.includes(element)) {
+        if (tags == element) {
           monTableau.push(plat);
         }
       });
@@ -34,7 +34,7 @@ function affichageHtml(listMenu) {
     let catmenu = menu[0].categorie[0];
     let sectionParent = document.createElement("section");
     sectionParent.setAttribute("class", catmenu);
-    sectionParent.innerHTML = `<h3>${catmenu}</h3>  `;
+   // sectionParent.innerHTML = `<h3>${catmenu}</h3>  `; à modifier (logo section)
     menu.forEach((plat) => {
       sectionParent.append(listerPlat(plat));
       main.append(sectionParent);
@@ -81,6 +81,68 @@ function listerPlat(plat) {
   cardBody.appendChild(ingredients);
   return card;
 }
+function cleanHTML() {
+  main.querySelectorAll("section").forEach((element) => {
+    element.remove();
+  });
+}
+
+const listTri = document.querySelector(".listTri");
+for (const iterator of listTri.children) {
+  console.log(iterator);
+  iterator.setAttribute("class", iterator.innerHTML.valueOf());
+}
+listTri.addEventListener("click", (e) => {
+  switch (e.target.classList[0]) {
+    case "menu":
+      cleanHTML();
+      affichageHtml(fullMenu);
+      break;
+    case "sushi":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+    case "maki":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+    case "rolls":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+    case "sashimi":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+    case "onigiri":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+    case "ramen":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+    case "boisson":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+    case "dessert":
+      console.log(e.target.classList[0]);
+      cleanHTML();
+      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+      break;
+
+    default:
+      break;
+  }
+});
 
 //#endregion
 
@@ -93,8 +155,7 @@ bouton.addEventListener("click", () => {
 });
 
 affichageHtml(fullMenu);
-//affichageHtml([sortMenu(fullMenu)]);
-//affichageHtml([filterMenu(fullMenu, ["poisson", ""])]);
+
 
 //listerPlat(sortMenu(fullMenu));
 // ajout d'un bouton "ajout au panier sur les cards"
