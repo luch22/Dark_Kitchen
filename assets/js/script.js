@@ -65,9 +65,9 @@ function listerPlat(plat) {
 
   let prix = document.createElement("span");
 
-  prix.innerHTML = `<span class="prixArticle ">Prix</span> :  ${plat.prix} €`;
+  // prix.innerHTML = `<span class="prixArticle ">Prix</span> :  ${plat.prix} €`;
   prix.classList.add("item");
-  // prix.textContent = "Prix : " + plat.prix + " €";
+  prix.textContent = "Prix : " + plat.prix + " €";
   cardBody.appendChild(prix);
 
   let categorie = document.createElement("span");
@@ -127,16 +127,22 @@ affichagePanier(listPanier);
 function createPanier(card){
   let itemPanier = document.createElement("div");
   let namePanier = card.querySelector('h2');
-  let prixPanier = card.getElementsByClassName('prixArticle');
-  let prixText = document.createTextNode(prixPanier);
+  let prixPanier = card.children[3];
+  itemPanier.innerHTML = `<span>${namePanier.textContent}</span>`;
   cart.appendChild(itemPanier);
-  prixPanier.appendChild(prixText);
 }
 
 
 let card = document.getElementsByClassName("card");
-for (let i = 0; i < cards.length; i++) {
-  card[i].addEventListener('click', function() {
-    createPanier(cards[i]);
-  });
-};
+let card1 = document.querySelectorAll(".card-body")
+
+
+// card1.forEach(element => {
+//   console.log(element);
+  
+// });
+for (let i = 0; i < card.length; i++) {
+   card[i].addEventListener('click', function() {
+     createPanier(card[i]);
+   });
+ };
