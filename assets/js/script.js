@@ -34,11 +34,10 @@ function affichageHtml(listMenu) {
     let catmenu = menu[0].categorie[0];
     let sectionParent = document.createElement("section");
     sectionParent.setAttribute("class", catmenu);
-    sectionParent.innerHTML = `<h3>${catmenu}</h3>  `;
+    sectionParent.innerHTML = `<div class ="${catmenu}" ></div><h3>${catmenu}</h3>  `;
     menu.forEach((plat) => {
       sectionParent.append(listerPlat(plat));
       main.append(sectionParent);
-      
     });
   });
   ajoutPanier();
@@ -70,7 +69,7 @@ function listerPlat(plat) {
   let button = document.createElement("button");
   cardBody.appendChild(button);
   button.classList.add("btnPanier");
-  button.textContent = "test"
+  button.textContent = "test";
 
   // prix.innerHTML = `<span class="prixArticle ">Prix</span> :  ${plat.prix} €`;
   prix.classList.add("item");
@@ -81,43 +80,45 @@ function listerPlat(plat) {
   categorie.classList.add("item");
   categorie.textContent = "Catégories : " + plat.categorie;
   cardBody.appendChild(categorie);
-  if (plat.ingredients != null ) {
-      let ingredients = document.createElement("span");
-  ingredients.classList.add("item");
-  ingredients.textContent = "ingrédients : " + plat.ingredients;
-  cardBody.appendChild(ingredients);
-    
+  if (plat.ingredients != null) {
+    let ingredients = document.createElement("span");
+    ingredients.classList.add("item");
+    ingredients.textContent = "ingrédients : " + plat.ingredients;
+    cardBody.appendChild(ingredients);
   }
-
 
   return card;
 }
 function displayedcart() {
   console.log(cartItems);
+
   let divcart = document.createElement("div");
-    divcart.setAttribute("class","container_cart")
+  divcart.setAttribute("class", "container_cart");
+  aside.style.display = "block";
   cartItems.forEach((plat) => {
+    let divplat = document.createElement("div");
     let spanName = document.createElement("span");
     let spanPrix = document.createElement("span");
-    spanName.setAttribute("class","name_item_cart")  
-    spanPrix.setAttribute("class","price_item_cart")  
-    fullMenu.forEach((platSource)=> {
-      platSource.forEach((e) =>{
+    spanName.setAttribute("class", "name_item_cart");
+    spanPrix.setAttribute("class", "price_item_cart");
+    fullMenu.forEach((platSource) => {
+      platSource.forEach((e) => {
         if (e.name == plat.children[0].innerHTML) {
-          spanName.textContent = e.name;
-          spanPrix.textContent = e.prix;
+          spanName.textContent = e.name + " ";
+          spanPrix.textContent = e.prix + " €";
+          total = total + e.prix;
         }
 
-      })
-
-    })
-    divcart.append(spanName,spanPrix);
-    
-    
-
-
-   })
-   body.append(divcart);
+        if (cartItems.includes) {
+        }
+      });
+      divplat.append(spanName, spanPrix);
+    });
+    divcart.append(divplat);
+  });
+  console.log(total);
+  aside.append(divcart);
+  cartItems = [];
   // cartItems.forEach(plat => {
   //   let divcart = document.createElement("div");
   //   plat.forEach(item => {
@@ -133,8 +134,6 @@ function displayedcart() {
   //   })
 
   // });
-
-
 }
 
 function cleanHTML() {
@@ -143,88 +142,79 @@ function cleanHTML() {
   });
 }
 function ajoutPanier(params) {
-const btnPanier = document.querySelectorAll(".btnPanier")
-let card = document.getElementsByClassName("card");
-btnPanier.forEach(item => {
-  item.addEventListener('click', (e) => {
-    cartItems.push(item.parentNode);
+  const btnPanier = document.querySelectorAll(".btnPanier");
+  let card = document.getElementsByClassName("card");
+  btnPanier.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      cartItems.push(item.parentNode);
     });
-  
-});
+  });
 }
-
 
 function listertrier() {
   listTri.addEventListener("click", (e) => {
-  switch (e.target.classList[0]) {
-    case "menu":
-      cleanHTML();
-      affichageHtml(fullMenu);
-      break;
-    case "sushi":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
-    case "maki":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
-    case "rolls":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
-    case "sashimi":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
-    case "onigiri":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
-    case "ramen":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
-    case "boisson":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
-    case "dessert":
-      console.log(e.target.classList[0]);
-      cleanHTML();
-      affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
-      break;
+    switch (e.target.classList[0]) {
+      case "menu":
+        cleanHTML();
+        affichageHtml(fullMenu);
+        break;
+      case "sushi":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
+      case "maki":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
+      case "rolls":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
+      case "sashimi":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
+      case "onigiri":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
+      case "ramen":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
+      case "boisson":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
+      case "dessert":
+        console.log(e.target.classList[0]);
+        cleanHTML();
+        affichageHtml([filterMenu(fullMenu, e.target.classList[0])]);
+        break;
 
-    default:
-      break;
-  }
-});
-  
+      default:
+        break;
+    }
+  });
 }
 function darkMode() {
-  
   bouton.addEventListener("click", () => {
-  document.querySelector("main").classList.toggle("dark-mode");
-});
+    document.querySelector("main").classList.toggle("dark-mode");
+  });
 }
-const checkout = document.querySelector('#checkout');
-checkout.addEventListener("click",() => {
-  
-    displayedcart();
-
-})
-
+const checkout = document.querySelector("#checkout");
+checkout.addEventListener("click", () => {
+  displayedcart();
+});
 
 //#endregion
-
-
 
 const listTri = document.querySelector(".listTri");
 for (const iterator of listTri.children) {
@@ -234,31 +224,14 @@ for (const iterator of listTri.children) {
 const bouton = document.body.querySelector("#darkmode");
 const body = document.querySelector("body");
 const main = document.querySelector("main");
+const aside = document.querySelector("aside");
 const cards = document.getElementsByClassName("card");
 let cartItems = [];
-
-
+let total = 0;
 
 darkMode();
 affichageHtml(fullMenu);
 listertrier();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //affichageHtml([sortMenu(fullMenu)]);
 //affichageHtml([filterMenu(fullMenu, ["poisson", ""])]);
@@ -271,7 +244,6 @@ listertrier();
 //   addButton.addEventListener("click", function() {
 //   });
 // });
-
 
 /*let i = 0;
 function affichagePanier(listPanier) {
@@ -296,11 +268,3 @@ affichagePanier(listPanier);
 //   itemPanier.innerHTML = `<span>${namePanier.textContent}</span>`;
 //   cart.appendChild(itemPanier);
 // };
-
-
-
-
-
-
-
-

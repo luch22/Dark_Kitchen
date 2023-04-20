@@ -133,6 +133,16 @@ main {
   padding: 0 5px;
 }
 
+aside {
+  display: none;
+  height: 40%;
+  width: 35%;
+  right: 0;
+  position: fixed;
+  background: gray;
+  border: solid 3px greenyellow;
+}
+
 @media screen and (max-width: 400px) {
   main {
     max-width: 400px;
@@ -300,6 +310,16 @@ main {
   line-height: 20px;
   font-size: 1.3em;
   padding: 0 5px;
+}
+
+aside {
+  display: none;
+  height: 40%;
+  width: 35%;
+  right: 0;
+  position: fixed;
+  background: gray;
+  border: solid 3px greenyellow;
 }
 
 @media screen and (max-width: 400px) {
