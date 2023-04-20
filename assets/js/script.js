@@ -92,6 +92,37 @@ function listerPlat(plat) {
 
   return card;
 }
+function displayedcart() {
+  console.log(cartItems);
+  cartItems.forEach((plat) => {
+    console.log(plat);
+      let spanName = document.createElement("span");
+      let spanPrix = document.createElement("span");
+      spanName.textContent = plat.children[0].innerHTML;
+      console.log(plat.children[2].innerHTML.slice(parseInt(plat.children[2].innerHTML.length)-4,plat.children[2].innerHTML.length - 1));
+    
+    let divcart = document.createElement("div");
+
+
+   })
+  // cartItems.forEach(plat => {
+  //   let divcart = document.createElement("div");
+  //   plat.forEach(item => {
+  //     let spanName = document.createElement("span");
+  //     let spanPrix = document.createElement("span");
+  //     console.log(item[0]);
+  //     spanName.textContent = item[0];
+  //     console.log(item[3]);
+  //     spanPrix.textContent = item[3];
+  //     divcart.append(spanName);
+  //     divcart.append(spanPrix);
+
+  //   })
+
+  // });
+
+
+}
 
 function cleanHTML() {
   main.querySelectorAll("section").forEach((element) => {
@@ -103,8 +134,7 @@ const btnPanier = document.querySelectorAll(".btnPanier")
 let card = document.getElementsByClassName("card");
 btnPanier.forEach(item => {
   item.addEventListener('click', (e) => {
-    cartItems.push(item.parentNode);  
-    console.log(cartItems);
+    cartItems.push(item.parentNode);
     });
   
 });
@@ -171,7 +201,16 @@ function darkMode() {
   document.querySelector("main").classList.toggle("dark-mode");
 });
 }
+const checkout = document.querySelector('#checkout');
+checkout.addEventListener("click",() => {
+  
+    displayedcart();
+
+})
+
+
 //#endregion
+
 
 
 const listTri = document.querySelector(".listTri");
@@ -184,6 +223,7 @@ const body = document.querySelector("body");
 const main = document.querySelector("main");
 const cards = document.getElementsByClassName("card");
 let cartItems = [];
+
 
 
 darkMode();
@@ -199,9 +239,10 @@ listertrier();
 
 
 
-// let cart = document.createElement("aside");
-// cart.classList.add("cart");
-// body.appendChild(cart);
+
+
+
+
 
 
 
