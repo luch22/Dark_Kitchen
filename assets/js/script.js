@@ -34,7 +34,7 @@ function affichageHtml(listMenu) {
     let catmenu = menu[0].categorie[0];
     let sectionParent = document.createElement("section");
     sectionParent.setAttribute("class", catmenu);
-    sectionParent.innerHTML = `<h3>${catmenu}</h3>  `;
+   // sectionParent.innerHTML = `<h3>${catmenu}</h3>  `; à modifier (logo section)
     menu.forEach((plat) => {
       sectionParent.append(listerPlat(plat));
       main.append(sectionParent);
