@@ -75,6 +75,17 @@ header h1 {
 header .toggle {
   margin: 25px 0;
 }
+header .listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1195a1;
+}
+header .listTri li {
+  float: left;
+  border: 0.5px solid lightgray;
+  padding: 5px;
+}
 
 body {
   margin: 0;
@@ -227,6 +238,17 @@ header h1 {
 }
 header .toggle {
   margin: 25px 0;
+}
+header .listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1195a1;
+}
+header .listTri li {
+  float: left;
+  border: 0.5px solid lightgray;
+  padding: 5px;
 }
 
 body {

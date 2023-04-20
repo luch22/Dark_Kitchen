@@ -6,7 +6,7 @@ function filterMenu(listMenu, tags) {
   listMenu.forEach((menu) => {
     menu.forEach((plat) => {
       plat.categorie.forEach((element) => {
-        if (tags.includes(element)) {
+        if (tags == element) {
           monTableau.push(plat);
         }
       });
@@ -82,6 +82,43 @@ function listerPlat(plat) {
   return card;
 }
 
+const listTri = document.querySelector(".listTri");
+for (const iterator of listTri.children) {
+  console.log(iterator);
+  iterator.setAttribute("class", iterator.innerHTML.valueOf());
+}
+listTri.addEventListener("click", (e) => {
+  switch (e.target.classList[0]) {
+    case "sushi":
+      console.log("sushi");
+      break;
+    case "maki":
+      console.log("maki");
+      break;
+    case "rolls":
+      console.log("rolls");
+      break;
+    case "sashimi":
+      console.log("sashimi");
+      break;
+    case "onigiri":
+      console.log("onigiri");
+      break;
+    case "ramen":
+      console.log("ramen");
+      break;
+    case "boisson":
+      console.log("boisson");
+      break;
+    case "dessert":
+      console.log("dessert");
+      break;
+
+    default:
+      break;
+  }
+});
+
 //#endregion
 
 const bouton = document.body.querySelector("#darkmode");
@@ -92,7 +129,7 @@ bouton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 });
 
-// affichageHtml(fullMenu);
+affichageHtml(fullMenu);
 // affichageHtml([sortMenu(fullMenu)]);
 // affichageHtml([filterMenu(fullMenu, ["poisson", ""])]);
 

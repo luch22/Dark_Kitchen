@@ -22,6 +22,17 @@ header {
   .toggle {
     margin: 25px 0;
   }
+  .listTri {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1195a1;
+    li {
+      float: left;
+      border: 0.5px solid lightgray;
+      padding: 5px;
+    }
+  }
 }
 body {
   margin: 0;
