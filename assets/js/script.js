@@ -34,7 +34,7 @@ function affichageHtml(listMenu) {
     let catmenu = menu[0].categorie[0];
     let sectionParent = document.createElement("section");
     sectionParent.setAttribute("class", catmenu);
-    sectionParent.innerHTML = `<div class ="${catmenu}" ></div><h3>${catmenu}</h3>  `;
+   // sectionParent.innerHTML = `<div class ="${catmenu}" ></div><h3>${catmenu}</h3>  `;
     menu.forEach((plat) => {
       sectionParent.append(listerPlat(plat));
       main.append(sectionParent);
@@ -69,7 +69,7 @@ function listerPlat(plat) {
   let button = document.createElement("button");
   cardBody.appendChild(button);
   button.classList.add("btnPanier");
-  button.textContent = "test";
+  button.textContent = "Add to Cart";
 
   // prix.innerHTML = `<span class="prixArticle ">Prix</span> :  ${plat.prix} €`;
   prix.classList.add("item");
