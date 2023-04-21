@@ -1,4 +1,4 @@
-import { ajoutPanier } from "./ajoutPanier.js";
+import { ajoutPanier, supprimerPanier } from "./ajoutPanier.js";
 import { fullMenu } from "./objetMenu.js";
 const aside = document.querySelector("aside");
 
@@ -26,7 +26,5 @@ export function displayedcart() {
     divcart.append(divplat);
   });
   aside.append(divcart);
-  //   ajoutPanier().forEach((e) => {
-  //     e.remove();
-  //   });
+  supprimerPanier();
 }

@@ -52,159 +52,30 @@ table {
   border-spacing: 0;
 }
 
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body header {
+  height: 30vh;
+  background: linear-gradient(20deg, rgba(203, 203, 203, 0.693), rgba(238, 49, 248, 0.424));
 }
-
-header {
-  padding-top: 40px;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(127, 255, 212, 0.575);
+body header .listTri {
+  float: left;
 }
-header h1 {
-  text-align: center;
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-header .toggle {
-  margin: 25px 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-}
-
-main {
-  height: auto;
-  display: flex;
-  padding-top: 30px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.card {
+body main section .card {
   width: 250px;
   height: 360px;
   margin: 25px 25px;
   padding-bottom: 10px;
   border-radius: 5px;
-  background-color: rgba(78, 238, 113, 0.2);
+  background: linear-gradient(20deg, rgba(203, 203, 203, 0.693), rgba(238, 49, 248, 0.424));
   box-shadow: 0px 0px 10px 0px #000;
 }
-
-.img {
+body main section .card .img {
   height: 130px;
   width: 250px;
   -o-object-fit: contain;
      object-fit: contain;
   background-color: white;
   border-radius: 5px 5px 0px 0px;
-}
-
-.card-body {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  height: 230px;
-}
-.card-body .h2 {
-  font-size: 2em;
-  font-weight: 600;
-  -webkit-text-decoration: underline darkcyan;
-          text-decoration: underline darkcyan;
-  text-align: center;
-  margin: 0 8px 10px 8px;
-}
-.card-body .item {
-  margin: 5px 0;
-  text-align: center;
-  line-height: 20px;
-  font-size: 1.3em;
-  padding: 0 5px;
-}
-
-aside {
-  display: none;
-  height: 40%;
-  width: 35%;
-  right: 0;
-  position: fixed;
-  background: gray;
-  border: solid 3px greenyellow;
-}
-
-@media screen and (max-width: 400px) {
-  main {
-    max-width: 400px;
-  }
-}
-@media screen and (min-width: 400px) {
-  main {
-    min-width: 400px;
-  }
-  main section {
-    margin-top: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: first baseline;
-  }
-}
-.toggle {
-  --width: 80px;
-  --height: calc(var(--width) / 3);
-  position: relative;
-  display: inline-block;
-  width: var(--width);
-  height: var(--height);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  border-radius: var(--height);
-  cursor: pointer;
-}
-
-.toggle input {
-  display: none;
-}
-
-.toggle .slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--height);
-  background-color: #ccc;
-  transition: all 0.4s ease-in-out;
-}
-
-.toggle .slider::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(var(--height));
-  height: calc(var(--height));
-  border-radius: calc(var(--height) / 2);
-  background-color: #fff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s ease-in-out;
-}
-
-.toggle input:checked + .slider {
-  background-color: #2196f3;
-}
-
-.toggle input:checked + .slider::before {
-  transform: translateX(calc(var(--width) - var(--height)));
+  background-color: rgba(0, 0, 0, 0.174);
 }
 
 body {
@@ -214,6 +85,26 @@ body {
 body .dark-mode {
   background-color: #333333;
   color: #ffffff;
+}
+body header #darkmode {
+  display: none;
+}
+body header .back {
+  margin: 30px;
+  height: 30px;
+  width: 70px;
+  border-radius: 30px;
+  background: #333333;
+  position: relative;
+}
+body header .back .boule {
+  position: absolute;
+  align-items: center;
+  margin: 4px 0 0 4px;
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
 }
 
 .listTri {
@@ -228,7 +119,7 @@ body .dark-mode {
   float: left;
   border: solid 3px white;
   border-radius: 10px 10px 0 0;
-  background-color: #21ecf3;
+  background-color: rgba(186, 82, 153, 0.5843137255);
   box-shadow: 0 -3px 3px 3px rgba(0, 0, 0, 0.185);
   padding: 5px;
   font-size: 1.5em;
@@ -239,113 +130,28 @@ body .dark-mode {
   padding: 5px;
 }
 
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body header {
+  height: 30vh;
+  background: linear-gradient(20deg, rgba(203, 203, 203, 0.693), rgba(238, 49, 248, 0.424));
 }
-
-header {
-  padding-top: 40px;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(127, 255, 212, 0.575);
+body header .listTri {
+  float: left;
 }
-header h1 {
-  text-align: center;
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-header .toggle {
-  margin: 25px 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-}
-
-main {
-  height: auto;
-  display: flex;
-  padding-top: 30px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.card {
+body main section .card {
   width: 250px;
   height: 360px;
   margin: 25px 25px;
   padding-bottom: 10px;
   border-radius: 5px;
-  background-color: rgba(78, 238, 113, 0.2);
+  background: linear-gradient(20deg, rgba(203, 203, 203, 0.693), rgba(238, 49, 248, 0.424));
   box-shadow: 0px 0px 10px 0px #000;
 }
-
-.img {
+body main section .card .img {
   height: 130px;
   width: 250px;
   -o-object-fit: contain;
      object-fit: contain;
   background-color: white;
   border-radius: 5px 5px 0px 0px;
-}
-
-.card-body {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  height: 230px;
-}
-.card-body .h2 {
-  font-size: 2em;
-  font-weight: 600;
-  -webkit-text-decoration: underline darkcyan;
-          text-decoration: underline darkcyan;
-  text-align: center;
-  margin: 0 8px 10px 8px;
-}
-.card-body .item {
-  margin: 5px 0;
-  text-align: center;
-  line-height: 20px;
-  font-size: 1.3em;
-  padding: 0 5px;
-}
-
-aside {
-  display: none;
-  height: 40%;
-  width: 35%;
-  right: 0;
-  position: fixed;
-  background: gray;
-  border: solid 3px greenyellow;
-}
-
-@media screen and (max-width: 400px) {
-  main {
-    max-width: 400px;
-  }
-}
-@media screen and (min-width: 400px) {
-  main {
-    min-width: 400px;
-  }
-  main section {
-    margin-top: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: first baseline;
-  }
-}
-header {
-  background-image: url("/images/banquet.jpeg");
+  background-color: rgba(0, 0, 0, 0.174);
 }/*# sourceMappingURL=main.css.map */

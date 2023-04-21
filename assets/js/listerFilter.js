@@ -1,33 +1,15 @@
 import { affichageHtml } from "./afficher.js";
+import { cleanHTML } from "./cleanHTML.js";
+import { darkMode } from "./darkMode.js";
 import { filterMenu } from "./filtre.js";
 import { fullMenu } from "./objetMenu.js";
-import { displayedcart } from "./afficherPlat.js";
+import { payer } from "./payer.js";
 
-function cleanHTML() {
-  document
-    .querySelector("main")
-    .querySelectorAll("section")
-    .forEach((element) => {
-      element.remove();
-    });
-}
-
-function darkMode() {
-  document.body.querySelector("#darkmode").addEventListener("click", () => {
-    document.querySelector("main").classList.toggle("dark-mode");
-  });
-}
 const listTri = document.querySelector(".listTri");
 for (const iterator of listTri.children) {
   console.log(iterator);
   iterator.setAttribute("class", iterator.innerHTML.valueOf());
 }
-function payer() {
-  document.querySelector("#checkout").addEventListener("click", () => {
-    displayedcart();
-  });
-}
-
 export function listertrier() {
   listTri.addEventListener("click", (e) => {
     switch (e.target.classList[0]) {

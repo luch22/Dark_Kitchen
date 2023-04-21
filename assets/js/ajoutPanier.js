@@ -8,3 +8,6 @@ export function ajoutPanier() {
   });
   return cartItems;
 }
+export function supprimerPanier() {
+  cartItems = [];
+}
