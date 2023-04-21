@@ -77,17 +77,6 @@ main {
     padding: 0 5px;
   }
 }
-aside {
-  display: none;
-  height: 40%;
-  width: 35%;
-  right: 0;
-  position: fixed;
-  background: gray;
-  border: solid 3px greenyellow;
-}
-.container_cart {
-}
 //responsive
 @media screen and (max-width: 400px) {
   main {
@@ -97,7 +86,7 @@ aside {
 @media screen and (min-width: 400px) {
   main {
     min-width: 400px;
-    section {
+    section{
       margin-top: 200px;
       display: flex;
       flex-wrap: wrap;
@@ -105,3 +94,4 @@ aside {
     }
   }
 } ;
+
