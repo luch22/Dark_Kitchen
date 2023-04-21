@@ -46,15 +46,16 @@
 .toggle input:checked + .slider::before {
   transform: translateX(calc(var(--width) - var(--height)));
 }
-main {
+body {
   background-color: #ffffff;
+
   color: #333333;
+  .dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+  }
 }
 
-main.dark-mode {
-  background-color: #333333;
-  color: #ffffff;
-}
 //filter
 .listTri {
   list-style-type: none;
