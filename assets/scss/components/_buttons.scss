@@ -56,19 +56,6 @@ main.dark-mode {
   width: 400px;
   color: #ffffff;
 }
-/*/.listTri {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    text-transform: capitalize;
-    cursor: pointer;
-    float: left;
-    border: 0.5px solid lightgray;
-    padding: 5px;
-  }
-}*/
 
 //checkout
 #cart{
@@ -105,6 +92,7 @@ main.dark-mode {
     text-align: center;
     color: #353535;
     font-size: 1.5em;
+    cursor: pointer;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 70px;
   }}
@@ -117,3 +105,5 @@ main.dark-mode {
     border-radius: 10px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
+
+
