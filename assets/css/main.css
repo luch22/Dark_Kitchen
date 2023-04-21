@@ -60,6 +60,7 @@ table {
 }
 
 header {
+<<<<<<< HEAD
   background-image: url("/images/header_background.png");
   background-repeat: no-repeat;
   display: flex;
@@ -81,6 +82,22 @@ header .cart {
   display: grid;
   align-items: stretch;
   justify-content: flex-end;
+=======
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(127, 255, 212, 0.575);
+}
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .toggle {
+  margin: 25px 0;
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
 }
 
 body {
@@ -139,6 +156,7 @@ main {
   font-size: 1.3em;
   padding: 0 5px;
 }
+<<<<<<< HEAD
 .card-body .footer-logos {
   width: 399px;
   height: 200px;
@@ -149,11 +167,14 @@ main {
 .footer-logos img {
   width: 75px;
 }
+=======
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
 
 @media screen and (max-width: 400px) {
   main {
     max-width: 400px;
   }
+<<<<<<< HEAD
   .logoHeader {
     width: 200px;
     height: 200px;
@@ -173,6 +194,18 @@ main {
   .logoHeader {
     width: 200px;
     height: 200px;
+=======
+}
+@media screen and (min-width: 400px) {
+  main {
+    min-width: 400px;
+  }
+  main section {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
   }
 }
 .toggle {
@@ -213,6 +246,7 @@ main {
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease-in-out;
+<<<<<<< HEAD
   background-image: url("/images/sun.svg");
   background-repeat: no-repeat;
   background-color: white;
@@ -222,6 +256,12 @@ main {
   background-color: grey;
   background-image: url("/images/moon.svg");
   background-repeat: no-repeat;
+=======
+}
+
+.toggle input:checked + .slider {
+  background-color: #2196f3;
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
 }
 
 .toggle input:checked + .slider::before {
@@ -238,6 +278,7 @@ body.dark-mode {
   color: #ffffff;
 }
 
+<<<<<<< HEAD
 #checkout {
   background-image: url("/images/cart_a.svg");
   background-repeat: no-repeat;
@@ -249,6 +290,36 @@ body.dark-mode {
   position: fixed;
   right: 10px;
   top: 140px;
+=======
+.listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1195a1;
+}
+.listTri li {
+  text-transform: capitalize;
+  cursor: pointer;
+  float: left;
+  border: 0.5px solid lightgray;
+  padding: 5px;
+}
+
+.listTri {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.listTri li {
+  float: left;
+  border: 3px solid rgba(192, 14, 14, 0.849);
+  border-radius: 10px 10px 0 0;
+  background-color: #21ecf3;
+  box-shadow: 0 -3px 3px 3px rgba(0, 0, 0, 0.185);
+  padding: 5px;
+  font-size: 1.5em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
 }
 
 ::before,
@@ -259,6 +330,7 @@ body.dark-mode {
 }
 
 header {
+<<<<<<< HEAD
   background-image: url("/images/header_background.png");
   background-repeat: no-repeat;
   display: flex;
@@ -280,6 +352,22 @@ header .cart {
   display: grid;
   align-items: stretch;
   justify-content: flex-end;
+=======
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(127, 255, 212, 0.575);
+}
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .toggle {
+  margin: 25px 0;
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
 }
 
 body {
@@ -338,6 +426,7 @@ main {
   font-size: 1.3em;
   padding: 0 5px;
 }
+<<<<<<< HEAD
 .card-body .footer-logos {
   width: 399px;
   height: 200px;
@@ -348,11 +437,14 @@ main {
 .footer-logos img {
   width: 75px;
 }
+=======
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
 
 @media screen and (max-width: 400px) {
   main {
     max-width: 400px;
   }
+<<<<<<< HEAD
   .logoHeader {
     width: 200px;
     height: 200px;
@@ -373,4 +465,20 @@ main {
     width: 200px;
     height: 200px;
   }
+=======
+}
+@media screen and (min-width: 400px) {
+  main {
+    min-width: 400px;
+  }
+  main section {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+  }
+}
+header {
+  background-image: url("/images/banquet.jpeg");
+>>>>>>> 125163224ff4226d45ddfbfbcea6881cf1a4c543
 }/*# sourceMappingURL=main.css.map */
