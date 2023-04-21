@@ -65,6 +65,7 @@ main.dark-mode {
   height: 80px;
   width:80px;
   background-repeat: no-repeat;
+  cursor:pointer;
   position:fixed;
   top: 10px;
   right: 0;
@@ -80,14 +81,13 @@ main.dark-mode {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding: 0 20px;
+  padding: 0 10px;
   
   li {
    
     border: 2px solid rgba(0, 0, 0, 0.849);
     border-radius: 10px 10px 10px 10px;
     background-color: rgba(245, 245, 245, 0.664);
-   // box-shadow: 0 -3px 3px 10px rgba(0, 0, 0, 0.185);
     padding: 0 3px;
     text-align: center;
     color: #353535;
@@ -97,6 +97,7 @@ main.dark-mode {
     width: 70px;
   }}
   .btnPanier{
+    cursor:pointer;
     width: 38%;
     height: 30px;
     margin: 0 auto;
@@ -105,5 +106,4 @@ main.dark-mode {
     border-radius: 10px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
-
 

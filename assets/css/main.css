@@ -165,14 +165,39 @@ aside {
   }
 }
 @media screen and (min-width: 400px) {
-  main {
-    min-width: 400px;
-  }
-  main section {
-    margin-top: 50px;
+  section {
+    width: 100%;
+    padding-top: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: first baseline;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  header {
+    width: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/header_background.png");
+    background-size: cover;
+    background-position-x: 0;
+    background-repeat: no-repeat;
+    background-color: rgba(127, 255, 212, 0.575);
+  }
+  header .logo {
+    height: 200px;
+    width: 200px;
+    transform: scale(1.5);
+    position: relative;
+  }
+  header .listTri {
+    transform: translateY(0px);
+  }
+  header #cart {
+    background-size: 160px;
+    height: 160px;
+    width: 160px;
   }
 }
 .toggle {
@@ -241,6 +266,7 @@ main.dark-mode {
   height: 80px;
   width: 80px;
   background-repeat: no-repeat;
+  cursor: pointer;
   position: fixed;
   top: 10px;
   right: 0;
@@ -254,7 +280,7 @@ main.dark-mode {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .listTri li {
   border: 2px solid rgba(0, 0, 0, 0.849);
@@ -270,6 +296,7 @@ main.dark-mode {
 }
 
 .btnPanier {
+  cursor: pointer;
   width: 38%;
   height: 30px;
   margin: 0 auto;
@@ -392,13 +419,38 @@ aside {
   }
 }
 @media screen and (min-width: 400px) {
-  main {
-    min-width: 400px;
-  }
-  main section {
-    margin-top: 50px;
+  section {
+    width: 100%;
+    padding-top: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: first baseline;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  header {
+    width: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/header_background.png");
+    background-size: cover;
+    background-position-x: 0;
+    background-repeat: no-repeat;
+    background-color: rgba(127, 255, 212, 0.575);
+  }
+  header .logo {
+    height: 200px;
+    width: 200px;
+    transform: scale(1.5);
+    position: relative;
+  }
+  header .listTri {
+    transform: translateY(0px);
+  }
+  header #cart {
+    background-size: 160px;
+    height: 160px;
+    width: 160px;
   }
 }/*# sourceMappingURL=main.css.map */
