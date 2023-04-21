@@ -11,9 +11,9 @@ function cleanHTML() {
       element.remove();
     });
 }
-const bouton = document.body.querySelector("#darkmode");
+
 function darkMode() {
-  bouton.addEventListener("click", () => {
+  document.body.querySelector("#darkmode").addEventListener("click", () => {
     document.querySelector("main").classList.toggle("dark-mode");
   });
 }
