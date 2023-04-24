@@ -75,6 +75,7 @@ main.dark-mode {
   height: 80px;
   width:80px;
   background-repeat: no-repeat;
+  cursor:pointer;
   position:fixed;
   top: 170px;
   right: 35px;
@@ -89,7 +90,7 @@ main.dark-mode {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding: 0 20px;
+  padding: 0 10px;
   
   li {
    
@@ -107,6 +108,8 @@ main.dark-mode {
 }
   .btnPanier{
     width: 75px;
+    cursor:pointer;
+    width: 38%;
     height: 30px;
     margin: 0 auto;
     color: white;
@@ -118,5 +121,4 @@ main.dark-mode {
     right: 20px;
     border: solid3;
   }
-
 

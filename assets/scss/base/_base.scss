@@ -208,6 +208,46 @@ footer {
       justify-content: first baseline;
     }
   }
+}
+@media screen and (min-width: 400px) {
+  section{
+    width:100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+
+  }
+
+header {
+
+  width: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/header_background.png");
+  background-size: cover;
+  background-position-x: 0;
+  background-repeat: no-repeat;
+  background-color: rgba(127, 255, 212, 0.575);
+  .logo{
+    height: 200px;
+    width: 200px;
+    transform: scale(1.5);
+    position: relative;
+  }
+  .listTri{
+    transform: translateY(0px);
+  }
+  #cart{
+    background-size: 160px;
+    height: 160px;
+    width:160px;
+  }
+
+  }
   header {
     width: 100%;
     max-width: 1300px;
