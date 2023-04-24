@@ -60,52 +60,122 @@ table {
 }
 
 header {
-  padding-top: 40px;
-  width: 400px;
+  width: 100%;
   display: flex;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-image: url("/images/header_background.png");
-  background-position-x: -700px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(127, 255, 212, 0.575);
-}
-header .logo {
-  height: 200px;
-  width: 200px;
-  transform: scale(1.3);
+  flex-direction: row;
   position: relative;
+  height: 275px;
+  overflow: hidden;
+  text-align: center;
 }
-header h1 {
+
+.logos-header {
+  display: inline-block;
+  justify-content: space-between;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 260px;
+  width: 260px;
+  max-width: 100%;
+}
+.logos-header .livraison {
+  height: 35px;
+  width: 35px;
+}
+.logos-header .livraison img {
+  width: 100%;
+  height: 100%;
+}
+.logos-header .livraison .logo {
+  height: 250px;
+  width: auto;
+  max-width: 100%;
+}
+.logos-header .livraison .logo img {
+  width: 250px;
+  height: auto;
+}
+
+h1 {
   text-align: center;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
   color: #303030;
+  margin-top: 20px;
 }
-header .toggle {
-  margin: 25px 0;
+
+.toggle {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transform: translateX(-50%);
+  height: 25px;
+}
+
+.listTri {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  font-size: 8px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+/*.listTri ul {
+  display: ;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}*/
+.listTri li {
+  display: inline;
+  margin: 0 10px;
+  padding: 0;
 }
 
 body {
+  max-width: 1300px;
   margin: 0;
   padding: 0;
   font-family: fantasy;
   font-size: 12px;
 }
-
-main {
+body aside {
+  height: 320px;
+  width: 125px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: wheat;
+  border: solid 3px rgb(80, 80, 80);
+}
+body main {
   height: auto;
   display: flex;
   padding-top: 30px;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  padding: 30px 10px;
 }
-
-.card {
+body .card {
   width: 250px;
   height: 360px;
   margin: 25px 25px;
@@ -114,8 +184,7 @@ main {
   background-color: rgba(170, 170, 170, 0.699);
   box-shadow: 0px 0px 10px 0px #000;
 }
-
-.img {
+body .card .img {
   height: 130px;
   width: 250px;
   -o-object-fit: contain;
@@ -123,14 +192,13 @@ main {
   background-color: white;
   border-radius: 5px 5px 0px 0px;
 }
-
-.card-body {
+body .card .card-body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   height: 230px;
 }
-.card-body .h2 {
+body .card .card-body .h2 {
   font-size: 2em;
   font-weight: 500;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -141,30 +209,49 @@ main {
   text-align: center;
   margin: 0 8px 10px 8px;
 }
-.card-body .item {
+body .card .card-body .item {
   margin: 5px 0;
   text-align: center;
   line-height: 20px;
   font-size: 1.3em;
   padding: 0 5px;
 }
-
-aside {
-  display: none;
-  height: 40%;
-  width: 35%;
-  right: 0;
+body .card .card-body .btnPanier {
   position: fixed;
-  background: gray;
-  border: solid 3px rgb(80, 80, 80);
+  top: 350px;
+  right: 35px;
+}
+body .card .card-body .cart {
+  position: fixed;
+  right: 10px;
+  top: 260px;
+}
+
+footer {
+  height: 30px;
+  border: #303030 3px;
+  overflow: hidden;
+}
+footer .logos-footer img {
+  width: auto;
+  height: 75px;
 }
 
 @media screen and (max-width: 400px) {
   main {
     max-width: 400px;
   }
+  header {
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+  }
+  header .listTri li {
+    display: block;
+    margin: 10px 0;
+  }
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 401px) and (max-width: 1300px) {
   main {
     min-width: 400px;
   }
@@ -173,6 +260,34 @@ aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: first baseline;
+  }
+  header {
+    width: 100%;
+    max-width: 1300px;
+    flex-wrap: nowrap;
+  }
+  header .logo {
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+  header .listTri .listTri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .listTri .listTri li {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 .toggle {
@@ -198,8 +313,11 @@ aside {
   width: 100%;
   height: 100%;
   border-radius: var(--height);
-  background-color: #ccc;
+  background-color: grey;
   transition: all 0.4s ease-in-out;
+  background-image: url("/images/sun.svg");
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .toggle .slider::before {
@@ -216,7 +334,11 @@ aside {
 }
 
 .toggle input:checked + .slider {
-  background-color: #2196f3;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+  background-image: url("/images/moon.svg");
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 .toggle input:checked + .slider::before {
@@ -236,14 +358,14 @@ main.dark-mode {
 
 #cart {
   background-image: url(/images/cart_a.svg);
-  background-size: 80px;
+  background-size: 82px;
   opacity: 75%;
   height: 80px;
   width: 80px;
   background-repeat: no-repeat;
   position: fixed;
-  top: 10px;
-  right: 0;
+  top: 170px;
+  right: 35px;
 }
 #cart #checkout {
   visibility: hidden;
@@ -257,26 +379,30 @@ main.dark-mode {
   padding: 0 20px;
 }
 .listTri li {
-  border: 2px solid rgba(0, 0, 0, 0.849);
+  border: 2px solid yellow;
   border-radius: 10px 10px 10px 10px;
   background-color: rgba(245, 245, 245, 0.664);
   padding: 0 3px;
   text-align: center;
-  color: #353535;
-  font-size: 1.5em;
+  color: black;
+  font-size: 12px;
   cursor: pointer;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   width: 70px;
 }
 
 .btnPanier {
-  width: 38%;
+  width: 75px;
   height: 30px;
   margin: 0 auto;
   color: white;
   background-color: #333333;
   border-radius: 10px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  position: fixed;
+  top: 0;
+  right: 20px;
+  border: solid3;
 }
 
 ::before,
@@ -287,52 +413,122 @@ main.dark-mode {
 }
 
 header {
-  padding-top: 40px;
-  width: 400px;
+  width: 100%;
   display: flex;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-image: url("/images/header_background.png");
-  background-position-x: -700px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(127, 255, 212, 0.575);
-}
-header .logo {
-  height: 200px;
-  width: 200px;
-  transform: scale(1.3);
+  flex-direction: row;
   position: relative;
+  height: 275px;
+  overflow: hidden;
+  text-align: center;
 }
-header h1 {
+
+.logos-header {
+  display: inline-block;
+  justify-content: space-between;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 260px;
+  width: 260px;
+  max-width: 100%;
+}
+.logos-header .livraison {
+  height: 35px;
+  width: 35px;
+}
+.logos-header .livraison img {
+  width: 100%;
+  height: 100%;
+}
+.logos-header .livraison .logo {
+  height: 250px;
+  width: auto;
+  max-width: 100%;
+}
+.logos-header .livraison .logo img {
+  width: 250px;
+  height: auto;
+}
+
+h1 {
   text-align: center;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
   color: #303030;
+  margin-top: 20px;
 }
-header .toggle {
-  margin: 25px 0;
+
+.toggle {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transform: translateX(-50%);
+  height: 25px;
+}
+
+.listTri {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  font-size: 8px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+/*.listTri ul {
+  display: ;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}*/
+.listTri li {
+  display: inline;
+  margin: 0 10px;
+  padding: 0;
 }
 
 body {
+  max-width: 1300px;
   margin: 0;
   padding: 0;
   font-family: fantasy;
   font-size: 12px;
 }
-
-main {
+body aside {
+  height: 320px;
+  width: 125px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: wheat;
+  border: solid 3px rgb(80, 80, 80);
+}
+body main {
   height: auto;
   display: flex;
   padding-top: 30px;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  padding: 30px 10px;
 }
-
-.card {
+body .card {
   width: 250px;
   height: 360px;
   margin: 25px 25px;
@@ -341,8 +537,7 @@ main {
   background-color: rgba(170, 170, 170, 0.699);
   box-shadow: 0px 0px 10px 0px #000;
 }
-
-.img {
+body .card .img {
   height: 130px;
   width: 250px;
   -o-object-fit: contain;
@@ -350,14 +545,13 @@ main {
   background-color: white;
   border-radius: 5px 5px 0px 0px;
 }
-
-.card-body {
+body .card .card-body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   height: 230px;
 }
-.card-body .h2 {
+body .card .card-body .h2 {
   font-size: 2em;
   font-weight: 500;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -368,30 +562,49 @@ main {
   text-align: center;
   margin: 0 8px 10px 8px;
 }
-.card-body .item {
+body .card .card-body .item {
   margin: 5px 0;
   text-align: center;
   line-height: 20px;
   font-size: 1.3em;
   padding: 0 5px;
 }
-
-aside {
-  display: none;
-  height: 40%;
-  width: 35%;
-  right: 0;
+body .card .card-body .btnPanier {
   position: fixed;
-  background: gray;
-  border: solid 3px rgb(80, 80, 80);
+  top: 350px;
+  right: 35px;
+}
+body .card .card-body .cart {
+  position: fixed;
+  right: 10px;
+  top: 260px;
+}
+
+footer {
+  height: 30px;
+  border: #303030 3px;
+  overflow: hidden;
+}
+footer .logos-footer img {
+  width: auto;
+  height: 75px;
 }
 
 @media screen and (max-width: 400px) {
   main {
     max-width: 400px;
   }
+  header {
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+  }
+  header .listTri li {
+    display: block;
+    margin: 10px 0;
+  }
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 401px) and (max-width: 1300px) {
   main {
     min-width: 400px;
   }
@@ -400,5 +613,33 @@ aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: first baseline;
+  }
+  header {
+    width: 100%;
+    max-width: 1300px;
+    flex-wrap: nowrap;
+  }
+  header .logo {
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+  header .listTri .listTri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .listTri .listTri li {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }/*# sourceMappingURL=main.css.map */
